@@ -1,4 +1,3 @@
-import { MenuIcon } from "../../icons";
 
 export const MenuBtn = ({ onClick }: { onClick?: () => void }) => {
   return (
