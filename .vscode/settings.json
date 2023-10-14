@@ -1,0 +1,9 @@
+{
+  "exportall.config.folderListener": [
+    "/src/components/Global",
+    "/src/components/Global/Containers",
+    "/src/components/Global/Navigation",
+    "/src/components/Global/icons"
+  ],
+  "cSpell.words": ["Azodoh", "behance", "Chinedu", "Dribbble", "extralight", "Okechukwu", "Ventlio"]
+}
