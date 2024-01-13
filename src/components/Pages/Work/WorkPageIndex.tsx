@@ -1,18 +1,21 @@
-"use client"
+"use client";
 
-
-import { BigButton, HeroRoundedArt, PageContainer, SmallBorderButton } from "@/components";
+import {
+  BigButton,
+  PageContainer,
+} from "@/components";
 import { WorkSidebar } from "./WorkSidabar";
+import { WorkProjectCard } from "./WorkProjectCard";
 
 export const WorkPageIndex = () => {
   return (
     <PageContainer>
       <div
-        className="relative  mb-20 rounded-xl border border-[#312F2F] h-[70vh] py-20 md:py-14 md:p-8 px-3 lg:12 xl:px-20
+        className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[50vh] md:h-[60vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-20
       "
       >
         <div className="flex space-x-4">
-          <h1 className="text-white  leading-tight w-[100px] xl:text-9xl">
+          <h1 className="text-white  leading-tight w-[100px] xl:text-9xl text-4xl">
             All Works
           </h1>
         </div>
@@ -20,12 +23,12 @@ export const WorkPageIndex = () => {
         <div className="h-0.5 bg-white w-full my-4"></div>
 
         <div className="flex space-x-4 float-right relative">
-          <h1 className="text-white  leading-tight xl:text-8xl">
+          <h1 className="text-white  leading-tight xl:text-8xl text-4xl">
             Designing <br /> The Future
           </h1>
         </div>
 
-        <div className="flex absolute bottom-9 left-9 space-x-6">
+        <div className="flex absolute bottom-0 md:bottom-9 left-0 px-4 py-4 flex-wrap md:flex-nowrap gap-3  md:left-9 space-x-6">
           <BigButton title="All Work" active={true} onClick={() => {}} />
           <BigButton title="Design" active={false} onClick={() => {}} />
           <BigButton title="Webflow" active={false} onClick={() => {}} />
@@ -33,10 +36,13 @@ export const WorkPageIndex = () => {
         </div>
       </div>
 
-      <div className="flex ">
+      <div className="flex mb-32">
         <WorkSidebar />
 
-        <div className="bg-blue-400 h-[2000px] w-full">projects</div>
+        <div className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12">
+          <WorkProjectCard link="work/rendlr" />
+          <WorkProjectCard link="work/rendlr" />
+        </div>
       </div>
     </PageContainer>
   );
