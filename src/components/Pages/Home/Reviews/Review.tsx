@@ -27,7 +27,7 @@ export const Review = ({
             <span className="text-zinc-700">{title}</span>
           </div>
         </div>
-        <p className="text-lg md:text-2xl 2xl:text-3xl text-zinc-800 lg:pt-12">
+        <p className="text-base md:text-2xl 2xl:text-xl text-zinc-800 lg:pt-12">
           {review}
         </p>
       </div>

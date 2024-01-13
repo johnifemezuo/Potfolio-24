@@ -1,7 +1,7 @@
-
+"use client"
 import { Footer, Navigation } from "../../index";
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+export function Layout ({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div className="w-full">
       <Navigation />

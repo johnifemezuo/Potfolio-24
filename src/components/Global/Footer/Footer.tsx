@@ -15,11 +15,12 @@ import Link from "next/link";
 export const Footer = () => {
   return (
     <PageContainer>
-      <ExceptTwo />
-
-      {/* <FullWidthButton name="Contact me" /> */}
       
-      <div className="xl:flex xl:space-y-0 space-y-8 xl:space-x-6 mt-6 ">
+     
+
+      <FullWidthButton name="Lets Get in touch" />
+      
+      <div className="xl:flex xl:space-y-0 space-y-8 xl:space-x-6 mt-6 " id="footer">
         <div className="xl:w-[70%] grid grid-cols-2  gap-4 md:gap-6">
           <SocialCard
             name="Behance"

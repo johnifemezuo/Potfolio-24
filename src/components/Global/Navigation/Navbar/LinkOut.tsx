@@ -7,7 +7,7 @@ export const LinkOut = ({ link, title }: { link: string; title?: string }) => {
       <span className="font-light text-white md:text-2xl text-lg lg:text-xl">
         {title}
       </span>
-      <span className="transition duration-500">
+      <span className="transition duration-500 hidden md:block">
         <ArrowUp className="text-white" />
       </span>
     </Link>

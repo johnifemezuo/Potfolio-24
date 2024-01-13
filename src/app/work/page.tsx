@@ -1,9 +1,12 @@
-import React from 'react'
+import { WorkPageIndex } from "@/components";
+import Head from "next/head";
+import React from "react";
 
 function WorkPage() {
-  return (
-    <div>WorkPage</div>
-  )
+  <Head>
+    <title>John Ifemezuo | Works</title>
+  </Head>
+  return <WorkPageIndex />;
 }
 
-export default WorkPage
+export default WorkPage;

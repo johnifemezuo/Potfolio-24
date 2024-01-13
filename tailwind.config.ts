@@ -12,6 +12,7 @@ const config: Config = {
         "background-bg": "var(--background-bg)",
         "border-color": "var(--border-color)",
         "accent-color": "var(--accent-color)",
+        "accent-colorTwo": "var(--yellow-color)"
       },
     },
   },
