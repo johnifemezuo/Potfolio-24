@@ -21,7 +21,7 @@ export const WorkProjectCard = ({ link }: { link: string }) => {
           alt=""
           width={600}
           height={900}
-          className="object-cover w-full h-full group-hover:rounded-3xl duration-500 transition-all"
+          className="object-cover w-full h-full rounded-2xl md:rounded-none group-hover:rounded-3xl duration-500 transition-all"
         />
       </div>
       <div className="py-3 space-y-3 border-t mt-5 md:flex w-full md:justify-between items-center">

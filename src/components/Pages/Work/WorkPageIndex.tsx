@@ -28,7 +28,7 @@ export const WorkPageIndex = () => {
           </h1>
         </div>
 
-        <div className="flex absolute bottom-0 md:bottom-9 left-0 px-4 py-4 flex-wrap md:flex-nowrap gap-3  md:left-9 space-x-6">
+        <div className="flex absolute bottom-0 md:bottom-9 left-0 px-4 py-4 flex-wrap md:flex-nowrap gap-3  md:left-9 s">
           <BigButton title="All Work" active={true} onClick={() => {}} />
           <BigButton title="Design" active={false} onClick={() => {}} />
           <BigButton title="Webflow" active={false} onClick={() => {}} />
