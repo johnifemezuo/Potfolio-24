@@ -12,8 +12,8 @@ export const ContactForm = () => {
         <div className="pt-12 md:pt-20 lg:space-y-3">
           <p className="text-zinc-400 font-extralight text-lg lg:text-2xl">Email</p>
           <div className="flex--items space-x-4">
-            <ArrowRight className="w-5 md:w-10 rotate-9" />
-            <h1 className="text-base sm:text-lg text-white md:text-xl lg:text-2xl pt-1 group-hover:translate-x-5 transition-transform duration-500">
+            <ArrowRight className="w-5 md:w-10 rotate-9 text-white" />
+            <h1 className="tracking-tighter text-xl sm:text-lg text-white md:text-xl lg:text-2xl pt-1 group-hover:translate-x-5 transition-transform duration-500">
               Johnifemezuo@gmail.com
             </h1>
           </div>

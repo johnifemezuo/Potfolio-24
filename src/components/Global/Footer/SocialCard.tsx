@@ -11,7 +11,7 @@ export const SocialCard = ({icon, link, name}:{icon: React.ReactNode, link: stri
         </span>
 
         <div className="flex--items space-x-3 absolute bottom-0 left-0 pl-4 md:pl-8 pb-6">
-          <ArrowRight className="w-6 md:w-10" />
+          <ArrowRight className="w-6 md:w-10 text-white" />
           <h1 className=" text-white text-lg lg:text-2xl pt-1 group-hover:translate-x-5 transition-transform duration-500">
             {name}
           </h1>

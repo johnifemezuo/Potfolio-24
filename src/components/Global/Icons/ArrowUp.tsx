@@ -1,7 +1,6 @@
 
-export function ArrowUp({ className }: { className?: string }) {
+export function ArrowUp({ className }: Readonly<{ className?: string }>) {
   return (
-    <>
       <svg
         className={className}
         width="47"
@@ -10,7 +9,7 @@ export function ArrowUp({ className }: { className?: string }) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_8_72)">
+        <g clipPath="url(#clip0_8_72)">
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -29,6 +28,5 @@ export function ArrowUp({ className }: { className?: string }) {
           </clipPath>
         </defs>
       </svg>
-    </>
   );
 }

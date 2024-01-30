@@ -1,9 +1,16 @@
-import React from 'react'
+import { AboutPage } from "@/components";
+import React from "react";
 
 function AboutMePage() {
   return (
-    <div>AboutMePage</div>
-  )
+    <>
+      <head>
+        <title>About Me</title>
+      </head>
+
+      <AboutPage />
+    </>
+  );
 }
 
-export default AboutMePage
+export default AboutMePage;

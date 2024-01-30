@@ -13,7 +13,7 @@ export const Navigation = () => {
           </div>
 
           <div className="flex--items space-x-8">
-            <button onClick={() => push("#footer")} className="w-full px-5 py-3 bg-accent-colorTwo text-zinc-800 rounded-full hidden md:block">Get in touch</button>
+            <button onClick={() => push("#contact")} className="w-full px-5 py-3 bg-accent-colorTwo text-zinc-800 rounded-full hidden md:block">Get in touch</button>
             <Navbar />
           </div>
         </div>
