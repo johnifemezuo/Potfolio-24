@@ -8,7 +8,7 @@ export const projects: IProject[] = [
     link: "/work/rendlr",
     image: "/images/webss.jpg",
     category: "design",
-    tags: ["UI/UX Design", "Product Design", "Mobile Design"],
+    tags: ["UI/UX Design", "2023"],
   },
 
   {
@@ -18,7 +18,7 @@ export const projects: IProject[] = [
     link: "/work/rendlr",
     image: "/images/website.webp",
     category: "webflow",
-    tags: ["UI/UX Design", "Product Design", "Mobile Design"],
+    tags: ["UI/UX Design", "Product Design", ],
   },
   {
     title: "Zigah",
@@ -27,6 +27,6 @@ export const projects: IProject[] = [
     link: "/work/rendlr",
     image: "/images/webs.webp",
     category: "development",
-    tags: ["UI/UX Design", "Product Design", "Mobile Design"],
+    tags: ["Product Design", "Mobile Design"],
   },
 ];

@@ -26,7 +26,7 @@ export const SelectedWorks = () => {
       <div className="overflow-x-scroll bg-white w-full  ">
         <div className="lg:flex lg:w-[340%]   overflow-x-auto">
           <ProjectCard
-            title="Chromium"
+            title="Rendlr"
             img="/images/proj1.png"
             desc=" An innovative real-estate development company that focuses on constructing sustainable
               and cost-effective properties while minimizing environmental impacts."

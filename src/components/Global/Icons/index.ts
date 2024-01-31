@@ -6,6 +6,7 @@ export * from "./BehanceIcon";
 export * from "./CloseIcon";
 export * from "./DribbbleIcon";
 export * from "./HeroRoundedArt";
+export * from "./LeftArrow";
 export * from "./LinkedInIcon";
 export * from "./LogoIcon";
 export * from "./MenuIcon";

@@ -1,14 +1,16 @@
-import { AboutPage } from "@/components";
+import { AboutPage, Layout } from "@/components";
 import React from "react";
 
 function AboutMePage() {
   return (
     <>
       <head>
-        <title>About Me</title>
+        <title>John Ifemezuo | About</title>
       </head>
 
-      <AboutPage />
+      <Layout>
+        <AboutPage />
+      </Layout>
     </>
   );
 }

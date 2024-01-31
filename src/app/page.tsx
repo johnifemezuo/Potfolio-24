@@ -2,6 +2,7 @@ import {
   ExceptOne,
   ExceptTwo,
   HeroSection,
+  Layout,
   Playground,
   SelectedWorks,
   WorkSection,
@@ -15,13 +16,13 @@ export default function Home() {
   </Head>
 
   return (
-    <main>
+    <Layout>
       <HeroSection />
       <ExceptOne />
       <WorkSection />
       <SelectedWorks />+
       <Reviews />
       <Playground />
-    </main>
+    </Layout>
   );
 }
