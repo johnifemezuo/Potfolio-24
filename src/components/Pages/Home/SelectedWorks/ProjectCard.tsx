@@ -1,3 +1,4 @@
+import { link } from "fs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,11 +6,12 @@ interface IProjectCard {
   title: string;
   desc: string;
   img: string;
-  tags?: { title: string }[];
+  tags?: string[];
+  link: string;
 }
-export const ProjectCard = ({ title, desc, img, tags }: IProjectCard) => {
+export const ProjectCard = ({ title, desc, img, tags, link }: IProjectCard) => {
   return (
-    <Link href={"/"}>
+    <Link href={link}>
       <div className="h-[300px] lg:h-screen w-full bg-red-400 relative group ">
         <Image
           src={img}
@@ -30,8 +32,8 @@ export const ProjectCard = ({ title, desc, img, tags }: IProjectCard) => {
 
             <div className="flex gap-3 xl:flex-col">
               {tags?.map((tag, i) => (
-                <span key={i} className="rounded-border">
-                  {tag.title}
+                <span key={i} className="rounded-border text-xs">
+                  {tag}
                 </span>
               ))}
             </div>

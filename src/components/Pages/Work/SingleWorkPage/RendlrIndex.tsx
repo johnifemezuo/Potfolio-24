@@ -12,6 +12,7 @@ export const RendlrIndex = () => {
       duration="10 Months"
       year="2021"
       src="/images/me.png"
+      liveSite="https://rendlr.vercel.app/"
     >
       <div className="space-y-12">
         <GridTwoColsContainer className="py-12">

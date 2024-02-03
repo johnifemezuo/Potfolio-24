@@ -1,4 +1,10 @@
-import { ArrowDownIcon, ArrowRight, PageContainer, ProjectCard } from "@/components";
+import {
+  ArrowDownIcon,
+  ArrowRight,
+  PageContainer,
+  ProjectCard,
+} from "@/components";
+import { projects } from "@/contents";
 import Link from "next/link";
 
 export const SelectedWorks = () => {
@@ -15,8 +21,9 @@ export const SelectedWorks = () => {
               </h1>
 
               <p className="font-extralight text-sm lg:w-[400px] 2xl:w-[500px] sm:text-lg  md:text-lg lg:text-2xl leading-snug text-zinc-100 lg:font-medium">
-                I have crushed it on lots of projects, I both Design and Front end development and I
-                have got the receipts to prove it in my portfolio of case studies.
+                I have crushed it on lots of projects, I both Design and Front
+                end development and I have got the receipts to prove it in my
+                portfolio of case studies.
               </p>
             </div>
           </div>
@@ -25,36 +32,16 @@ export const SelectedWorks = () => {
 
       <div className="overflow-x-scroll bg-white w-full  ">
         <div className="lg:flex lg:w-[340%]   overflow-x-auto">
-          <ProjectCard
-            title="Rendlr"
-            img="/images/proj1.png"
-            desc=" An innovative real-estate development company that focuses on constructing sustainable
-              and cost-effective properties while minimizing environmental impacts."
-            tags={[{ title: "2024" }, { title: "Mobile app" }]}
-          />
-
-          <ProjectCard
-            title="Chromium"
-            img="/images/proj1.png"
-            desc=" An innovative real-estate development company that focuses on constructing sustainable
-              and cost-effective properties while minimizing environmental impacts."
-            tags={[{ title: "2024" }, { title: "Mobile app" }]}
-          />
-
-          <ProjectCard
-            title="Chromium"
-            img="/images/proj1.png"
-            desc=" An innovative real-estate development company that focuses on constructing sustainable
-              and cost-effective properties while minimizing environmental impacts."
-            tags={[{ title: "2024" }, { title: "Mobile app" }]}
-          />
-          <ProjectCard
-            title="Chromium"
-            img="/images/proj1.png"
-            desc=" An innovative real-estate development company that focuses on constructing sustainable
-              and cost-effective properties while minimizing environmental impacts."
-            tags={[{ title: "2024" }, { title: "Mobile app" }]}
-          />
+          {projects?.map((project, i) => (
+            <ProjectCard
+              key={i}
+              title={project.title}
+              img={project.image}
+              desc={project.description}
+              link={project.link}
+              tags={project.tags}
+            />
+          ))}
 
           <Link href="/my-works">
             <div className="lg:w-[600px] relative py-12 lg:py-0 bg-white  grid lg:h-screen place-content-center ">

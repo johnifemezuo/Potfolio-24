@@ -14,15 +14,19 @@ export const SingleWorkTopNavigation = ({
     <div className=" bg-white w-full">
       <PageContainer>
         <div className="py-5 flex items-center justify-between w-full">
+          <button
+            onClick={() => back()}
+            className=" font-medium text-base flex items-center space-x-3 rounded-full px-4 py-3 border border-zinc-200  hover:border-zinc-800 hover:text-zinc-800 duration-300 transition-all "
+          >
+            <span>
+              <LeftArrow />
+            </span>
+            <span> Go Back</span>
+          </button>
+
           <h2 className="tracking-tighter text-xl md:text-4xl text-center hidden md:block">
             Rendlr
           </h2>
-
-          <button onClick={() => back()} className=" font-medium text-base flex items-center space-x-3 rounded-full px-4 py-3 border border-zinc-200  hover:border-zinc-800 hover:text-zinc-800 duration-300 transition-all ">
-           <span><LeftArrow  /></span>
-           <span> Go Back</span>
-          </button>
-
 
           <button
             onClick={() => push("#contact")}

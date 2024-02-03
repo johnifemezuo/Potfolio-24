@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -65,7 +65,7 @@ export const WorkProjectCard = ({
             {tags?.map((tag, k) => (
               <button
                 key={k}
-                className="px-4 py-2 border rounded-full border-zinc-500 text-zinc-500 text-xs uppercase"
+                className="px-4 py-2 border rounded-full border-zinc-300 text-zinc-300 text-xs uppercase"
               >
                 {tag}
               </button>

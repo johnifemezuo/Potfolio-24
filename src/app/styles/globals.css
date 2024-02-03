@@ -53,7 +53,7 @@ body {
     @apply flex items-center justify-between;
   }
   .rounded-border {
-    @apply border uppercase border-stone-300 text-xs lg:text-base 2xl:text-lg rounded-full px-4 py-2 md:px-6 md:py-3 text-stone-300  inline-block text-center font-medium;
+    @apply border uppercase border-stone-300 text-xs lg:text-base  rounded-full px-4 py-2 md:px-6 md:py-3 text-stone-300  inline-block text-center font-medium;
   }
   .input {
     @apply w-full border border-border-color hover:border-white transition-all duration-500 rounded-xl px-4 lg:px-6 py-3 lg:py-4 placeholder:text-lg placeholder:lg:text-2xl placeholder:font-extralight bg-background-bg text-white text-2xl;

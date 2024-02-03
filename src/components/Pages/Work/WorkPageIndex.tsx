@@ -90,7 +90,7 @@ export const WorkPageIndex = () => {
               link={project.link}
               title={project.title}
               description={project.description}
-              image={project.image}
+              image={project.image2}
               tags={project.tags}
             />
           ))}

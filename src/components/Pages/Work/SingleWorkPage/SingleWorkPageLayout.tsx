@@ -1,13 +1,10 @@
 "use client";
 
 import {
-  ArrowDownIcon,
   ArrowRight,
-  BigButton,
   Footer,
   GridTwoColsContainer,
   PageContainer,
-  ProjectCard,
   ProjectImagePreview,
   WorkProjectCard,
 } from "@/components";
@@ -23,6 +20,7 @@ export const SingleWorkPageLayout = ({
   duration,
   year,
   src,
+  liveSite,
 }: {
   children: React.ReactNode;
   title: string;
@@ -31,13 +29,14 @@ export const SingleWorkPageLayout = ({
   duration: string;
   year: string;
   src: string;
+  liveSite?: string;
 }) => {
   const { push } = useRouter();
 
   return (
     <div>
       <div className="bg-white pb-44">
-        <PageContainer>
+        <div className="max-w-[1300px] mx-auto px-4 md:px-0">
           <div className=" py-9 md:py-14 lg:py-28 ">
             <GridTwoColsContainer>
               <div className="w-full">
@@ -73,10 +72,10 @@ export const SingleWorkPageLayout = ({
             </div>
           </div>
 
-          <ProjectImagePreview src={src} />
+          <ProjectImagePreview src={src} liveSite={liveSite} />
 
           <div>{children}</div>
-        </PageContainer>
+        </div>
       </div>
 
       <div className="bg-black py-12">
