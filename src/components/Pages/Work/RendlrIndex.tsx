@@ -4,8 +4,8 @@ import {
   ProjectImagePreview,
   RoundedButton,
 } from "@/components";
-import { SingleWorkPageLayout } from "./SingleWorkPageLayout";
-import { SectionTitle } from "./components/SectionTitle";
+import { SingleWorkPageLayout } from "./SingleWorkPage/SingleWorkPageLayout";
+import { SectionTitle } from "./SingleWorkPage/components/SectionTitle";
 import Image from "next/image";
 
 export const RendlrIndex = () => {

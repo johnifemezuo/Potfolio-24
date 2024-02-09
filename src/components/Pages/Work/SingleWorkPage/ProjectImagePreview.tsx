@@ -10,13 +10,13 @@ export const ProjectImagePreview = ({
   liveSite?: string;
 }) => {
   return (
-    <div className="relative mb-12 md:mb-20   h-[300px] md:h-[50vh] lg:h-[55vh] xl:h-[80vh] n">
+    <div className="relative mb-12 md:mb-20   h-[300px] md:h-[50vh] lg:h-[60vh] xl:h-[98vh] n">
       <Image
         src={src}
         alt="john ifemezuo project image"
-        width={1200}
+        width={1500}
         className=" w-full h-full object-cover"
-        height={1000}
+        height={1200}
       />
 
       {liveSite ? (

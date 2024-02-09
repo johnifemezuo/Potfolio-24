@@ -1,4 +1,4 @@
-import { SingleWorkTopNavigation } from "@/components";
+import { PageContainer, SingleWorkTopNavigation } from "@/components";
 
 export default function LayoutWithNavAndFooter({
   children,

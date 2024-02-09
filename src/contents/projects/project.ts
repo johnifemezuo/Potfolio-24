@@ -8,18 +8,18 @@ export const projects: IProject[] = [
     image: "/images/rendlr/rendlr-cover.png",
     image2: "/images/rendlr/rendlr-cover2.png",
     category: "design",
-    tags: ["UI/UX Design", "Mobile app", "2023"],
+    tags: ["Product Design", "Mobile app", "2023"],
   },
 
   {
-    title: "Piabol",
+    title: "Moonlight",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elitror nescObcaecati iure quasi a expeditaEum, alias!",
-    link: "/work/rendlr",
-    image: "/images/rendlr/rendlr-cover.png",
-    image2: "/images/website.webp",
-    category: "webflow",
-    tags: ["UI/UX Design", "Product Design"],
+      "An online dating app with great user experience and aesthetics.",
+    link: "/work/moonlight",
+    image: "/images/moonlight/moonlight-cover.png",
+    image2: "/images/moonlight/moonlight-thumbnail.png",
+    category: "design",
+    tags: ["Product Design", "Mobile App", "2023"],
   },
   {
     title: "Zigah",
