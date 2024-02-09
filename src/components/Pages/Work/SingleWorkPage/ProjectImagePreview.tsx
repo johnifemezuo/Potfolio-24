@@ -15,14 +15,14 @@ export const ProjectImagePreview = ({
         src={src}
         alt="john ifemezuo project image"
         width={1200}
-        className="object-cover w-full h-full"
-        height={900}
+        className=" w-full h-full object-cover"
+        height={1000}
       />
 
       {liveSite ? (
         <Link href={liveSite} target="_blank" rel="noreferrer">
-          <button className="group space-x-1 flex--items absolute top-0 z-50 w-[150px] md:w-[200px] -translate-y-20 right-0  p-4 bg-black text-white rounded-full shadow-lg text-xl h-[150px] md:h-[200px] grid place-content-center ">
-            <span className="text-"> Live site</span>
+          <button className="group space-x-1 flex--items absolute top-0 z-50 w-[120px] md:w-[200px] -translate-y-20 right-0  p-4 bg-black text-white rounded-full shadow-lg text-xl h-[120px] md:h-[200px] grid place-content-center ">
+            <span className="text-sm md:text-base"> Live site</span>
             <span className="rotate-180 group-hover:translate-x-2   duration-500 transition">
               <ArrowDownIcon className="rotate-45 w-6 h-6" />
             </span>

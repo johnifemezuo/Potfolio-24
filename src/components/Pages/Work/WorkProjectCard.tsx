@@ -27,9 +27,9 @@ export const WorkProjectCard = ({
       onMouseLeave={() => setOnHover(false)}
       onMouseOver={() => setOnHover(true)}
       onClick={() => push(link)}
-      className="group cursor-pointer  md:h-auto "
+      className="group cursor-pointer md:h-auto"
     >
-      <div className=" relative w-full h-[300px] md:h-[600px]  transition-all overflow-hidden ">
+      <div className=" relative w-full h-[300px] md:h-[600px] transition-all overflow-hidden ">
         <Image
           src={image}
           alt=""

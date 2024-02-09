@@ -20,6 +20,7 @@ export const SingleWorkPageLayout = ({
   duration,
   year,
   src,
+  platform,
   liveSite,
 }: {
   children: React.ReactNode;
@@ -29,18 +30,25 @@ export const SingleWorkPageLayout = ({
   duration: string;
   year: string;
   src: string;
+  platform: string;
   liveSite?: string;
 }) => {
   const { push } = useRouter();
 
+  const nonActiveProjects = projects.filter(
+    (project) => project.title !== title
+  );
+
   return (
     <div>
-      <div className="bg-white pb-44">
+      <div className="bg-white  md:pb-44">
         <div className="max-w-[1300px] mx-auto px-4 md:px-0">
           <div className=" py-9 md:py-14 lg:py-28 ">
             <GridTwoColsContainer>
               <div className="w-full">
-                <h1 className="text-4xl md:text-5xl lg:text-7xl">{title}</h1>
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium">
+                  {title}
+                </h1>
               </div>
 
               <div className="w-full ">
@@ -48,9 +56,9 @@ export const SingleWorkPageLayout = ({
               </div>
             </GridTwoColsContainer>
 
-            <div className="mt-9 md:mt-28 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12 md:">
+            <div className="mt-9 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-12 md:">
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-sm text-zinc-500 uppercase">
+                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
                   ROLE / SERVICES
                 </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
@@ -58,13 +66,25 @@ export const SingleWorkPageLayout = ({
                 </p>
               </div>
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-sm text-zinc-500 uppercase">DURATION</h2>
+                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                  DURATION
+                </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
                   {duration}
                 </p>
               </div>
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-sm text-zinc-500 uppercase">YEAR</h2>
+                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                  PLATFORM
+                </h2>
+                <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
+                  {platform}
+                </p>
+              </div>
+              <div className="space-y-2 md:space-y-5 divide-y inline-block">
+                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                  YEAR
+                </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
                   {year}
                 </p>
@@ -72,7 +92,9 @@ export const SingleWorkPageLayout = ({
             </div>
           </div>
 
-          <ProjectImagePreview src={src} liveSite={liveSite} />
+          <div className="md:mt-12 mt-20">
+            <ProjectImagePreview src={src} liveSite={liveSite} />
+          </div>
 
           <div>{children}</div>
         </div>
@@ -104,20 +126,16 @@ export const SingleWorkPageLayout = ({
             </div>
 
             <div className="grid gap-4 md:gap-8 lg:grid-cols-2">
-              <WorkProjectCard
-                link={projects[2].link}
-                title={projects[1].title}
-                description={projects[1].description}
-                image={projects[1].image}
-                tags={projects[1].tags}
-              />
-              <WorkProjectCard
-                link={projects[2].link}
-                title={projects[1].title}
-                description={projects[1].description}
-                image={projects[1].image}
-                tags={projects[1].tags}
-              />
+              {nonActiveProjects.map((project) => (
+                <WorkProjectCard
+                  key={project.title}
+                  link={project.link}
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  tags={project.tags}
+                />
+              ))}
             </div>
           </div>
         </PageContainer>
