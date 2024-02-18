@@ -22,9 +22,9 @@ export const Playground = () => {
         </div>
         <div className="w-[1000px] overflow-x-auto lg:w-full flex lg:grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-12 ">
           <PlayGroundDesigns img="/images/zigah/ecommerce.png" />
-          <PlayGroundDesigns img="/images/moonlight/moon.png" />
-          <PlayGroundDesigns img="/images/zigah/zigah-mock.png" />
-          <PlayGroundDesigns img="/images/moonlight/moon2.png" />
+          <PlayGroundDesigns img="/images/moonlight/moon.jpg" />
+          <PlayGroundDesigns img="/images/zigah/zigah-mock.jpg" />
+          <PlayGroundDesigns img="/images/moonlight/moon2.jpg" />
         </div>
       </div>
     </div>

@@ -17,8 +17,8 @@ export const projects: IProject[] = [
     description:
       "A modern day dating app for all. Experience connection and have fun",
     link: "/work/moonlight",
-    image: "/images/moonlight/moon.png",
-    image2: "/images/moonlight/moon.png",
+    image: "/images/moonlight/moon.jpg",
+    image2: "/images/moonlight/moon.jpg",
     category: "design",
     tags: ["Product Design", "Mobile App", "2023"],
   },
@@ -27,8 +27,8 @@ export const projects: IProject[] = [
     description:
       "Unlock boundless possibilities with Zigah, your global money transfer solution.",
     link: "/work/zigah",
-    image: "/images/zigah/zigah-mock.png",
-    image2: "/images/zigah/zigah-mock2.png",
+    image: "/images/zigah/zigah-mock.jpg",
+    image2: "/images/zigah/zigah-mock.jpg",
     category: "development",
     tags: ["Front end Development", "2023"],
   },

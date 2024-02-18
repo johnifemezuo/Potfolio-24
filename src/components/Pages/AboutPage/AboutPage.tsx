@@ -184,7 +184,7 @@ export const AboutPage = () => {
               company="Zigah.co"
               role="Front end Engineer"
               year="2022 - 2024"
-              image="/images/zigah/zigah-mock.png"
+              image="/images/zigah/zigah-mock.jpg"
             />
           </div>
         </div>

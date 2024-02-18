@@ -17,7 +17,7 @@ export const MoonlightIndex = () => {
       duration="5 Weeks"
       platform="IOS & Android App"
       year="2023"
-      src="/images/moonlight/moon.png"
+      src="/images/moonlight/moon.jpg"
       // liveSite="https://rendlr.vercel.app/"
     >
       <div className="space-y-12">
@@ -219,7 +219,7 @@ export const MoonlightIndex = () => {
 
         <div className="pt-12">
           <Image
-            src="/images/moonlight/moon2.png"
+            src="/images/moonlight/moon2.jpg"
             alt="john ifemezuo rendlr image"
             width={1500}
             className=" w-full h-full object-fill "
