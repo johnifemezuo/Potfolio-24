@@ -10,7 +10,7 @@ interface IWorkSidebarProps {
 export const WorkSidebar = ({
   projects,
   handleNameSelect,
-  selectedName
+  selectedName,
 }: IWorkSidebarProps) => {
   const designs = projects.filter((project) => project.category === "design");
   const webflows = projects.filter((project) => project.category === "webflow");
@@ -39,7 +39,7 @@ export const WorkSidebar = ({
             </div>
           ))}
         </div>
-    </div>
+      </div>
 
       <div>
         <h2
@@ -80,6 +80,8 @@ export const WorkSidebar = ({
               <br />
             </div>
           ))}
+
+          <p className="text-zinc-400 md:text-lg ">Coming Soon...</p>
         </div>
       </div>
     </div>

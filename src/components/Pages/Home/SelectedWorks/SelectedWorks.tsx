@@ -21,8 +21,8 @@ export const SelectedWorks = () => {
               </h1>
 
               <p className="font-extralight text-sm lg:w-[400px] 2xl:w-[500px] sm:text-lg  md:text-lg lg:text-2xl leading-snug text-zinc-100 lg:font-medium">
-                I have crushed it on lots of projects, I both Design and Front
-                end development and I have got the receipts to prove it in my
+                I have worked on lots of projects, I both Design and Front end
+                development and I have got the receipts to prove it in my
                 portfolio of case studies.
               </p>
             </div>
@@ -31,7 +31,7 @@ export const SelectedWorks = () => {
       </div>
 
       <div className="overflow-x-scroll bg-white w-full  ">
-        <div className="lg:flex lg:w-[340%]   overflow-x-auto">
+        <div className="lg:flex lg:w-340%] ">
           {projects?.map((project, i) => (
             <ProjectCard
               key={i}
@@ -43,7 +43,7 @@ export const SelectedWorks = () => {
             />
           ))}
 
-          <Link href="/my-works">
+          <Link href="/work">
             <div className="lg:w-[600px] relative py-12 lg:py-0 bg-white  grid lg:h-screen place-content-center ">
               <div className="grid justify-items-center space-y-4 lg:space-y-8">
                 <h1 className="text-xl md:text-3xl font-medium lg:text-[3rem] text-zinc-900">

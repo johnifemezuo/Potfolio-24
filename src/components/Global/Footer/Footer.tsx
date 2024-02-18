@@ -1,3 +1,4 @@
+
 import {
   ArrowRight,
   BehanceIcon,
@@ -24,28 +25,28 @@ export const Footer = () => {
         <div className="xl:w-[70%] grid grid-cols-2  gap-4 md:gap-6">
           <SocialCard
             name="Behance"
-            link="/"
+            link="https://www.behance.net/johnifem"
             icon={
               <BehanceIcon className=" text-white group-hover:text-zinc-700 duration-500" />
             }
           />
           <SocialCard
             name="Dribbble"
-            link="/"
+            link="https://dribbble.com/ifemezuo"
             icon={
               <DribbbleIcon className="text-white group-hover:text-zinc-700 duration-500" />
             }
           />
           <SocialCard
             name="LinkedIn"
-            link="/behance"
+            link="https://www.linkedin.com/in/john-ifemezuo-4332221a6/"
             icon={
               <LinkedInIcon className="text-white group-hover:text-zinc-700 duration-500" />
             }
           />
           <SocialCard
             name="Twitter"
-            link="/behance"
+            link="https://twitter.com/ifemezuo"
             icon={
               <TwitterIcon className="text-white group-hover:text-zinc-700 duration-500" />
             }
@@ -57,8 +58,8 @@ export const Footer = () => {
 
       {/* Footer */}
       <div className="font-light text-zinc-500 text-sm  md:flex--items justify-between w-full border-border-color mt-4 border text-center  md:text-lg lg:text-xl py-4 md:py-6 px-6 rounded-xl">
-        <p>John Ifemezuo. All Right Reserved.</p>
-        <p>©2023.</p>
+        <p>Designed and built by John Ifemezuo. All Right Reserved.</p>
+        <p>©2024.</p>
       </div>
 
       <Link href="#top">

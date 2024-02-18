@@ -25,7 +25,10 @@ export function Navbar() {
 
           <nav className="mt-14">
             <p className="uppercase text-stone-500 ">Navigation</p>
-            <button onClick={() => setOpenNav(false)} className="mt-12 flex flex-col space-y-6">
+            <button
+              onClick={() => setOpenNav(false)}
+              className="mt-12 flex flex-col space-y-6"
+            >
               <NavLink title="Home" link="/" />
               <NavLink title="My Work" link="/work" />
               <NavLink title="About me" link="/about-me" />
@@ -33,12 +36,21 @@ export function Navbar() {
             </button>
           </nav>
 
-          <button onClick={() => setOpenNav(false)} className="flex items-end justify-between w-full  mt-12">
+          <button
+            onClick={() => setOpenNav(false)}
+            className="flex items-end justify-between w-full  mt-12"
+          >
             <LinkOut title="ifemohn@gmail.com" link="/" />
-            <div className="grid gap-3">
-              <LinkOut title="Behance" link="/behance" />
-              <LinkOut title="Twitter" link="/twitter" />
-              <LinkOut title="Linkedin" link="/linkedin" />
+            <div className="grid">
+              <LinkOut
+                title="Behance"
+                link="https://www.behance.net/johnifem"
+              />
+              <LinkOut title="Twitter" link="https://twitter.com/ifemezuo" />
+              <LinkOut
+                title="Linkedin"
+                link="https://www.linkedin.com/in/john-ifemezuo-4332221a6/"
+              />
             </div>
           </button>
         </div>

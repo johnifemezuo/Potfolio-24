@@ -8,6 +8,7 @@ export const Navigation = () => {
       <PageContainer>
         <div className=" flex items-center justify-between text-white">
           <Logo />
+          
           <div className="hidden md:block">
             <SiteTime />
           </div>

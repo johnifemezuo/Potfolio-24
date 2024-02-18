@@ -12,7 +12,7 @@ interface IProjectCard {
 export const ProjectCard = ({ title, desc, img, tags, link }: IProjectCard) => {
   return (
     <Link href={link}>
-      <div className="h-[300px] lg:h-screen w-full bg-red-400 relative group ">
+      <div className="h-[300px] lg:h-screen md:w-[1500px]  relative group ">
         <Image
           src={img}
           alt="project"
@@ -24,13 +24,15 @@ export const ProjectCard = ({ title, desc, img, tags, link }: IProjectCard) => {
         <div className=" linear-dark absolute inset-0 flex justify-between p-12 lg:p-12">
           <div className="absolute bottom-0 right-0 left-0 px-4 lg:px-12 pb-6 lg:pb-12 xl:flex justify-between items-end space-y-4 xl:space-y-0">
             <div className="space-y-6 w-full  xl:md:max-w-3xl">
-              <h1 className="text-2xl md:text-xl lg:text-6xl font-semibold text-white">{title}</h1>
+              <h1 className="text-2xl md:text-xl lg:text-6xl font-semibold text-white">
+                {title}
+              </h1>
               <p className=" hidden sm:block text-sm md:text-base lg:text-xl text-white ">
                 {desc}
               </p>
             </div>
 
-            <div className="flex gap-3 xl:flex-col">
+            <div className="flex gap-3 ">
               {tags?.map((tag, i) => (
                 <span key={i} className="rounded-border text-xs">
                   {tag}

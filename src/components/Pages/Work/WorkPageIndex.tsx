@@ -15,7 +15,6 @@ export const WorkPageIndex = () => {
     setSelectedCategory(category);
     if (category === "all") {
       setFilteredData(projects);
-
     } else {
       setFilteredData(
         projects.filter((project) => project.category === category)
@@ -25,17 +24,12 @@ export const WorkPageIndex = () => {
 
   const filterProjectByName = (name: string) => {
     setSelectedName(name);
-    setFilteredData(
-      projects.filter((project) => project.title.includes(name))
-    );
+    setFilteredData(projects.filter((project) => project.title.includes(name)));
   };
-  
 
   return (
     <PageContainer>
-      <div
-        className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[50vh] md:h-[68vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12"
-      >
+      <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[50vh] md:h-[68vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12">
         <div className="flex space-x-4">
           <h1 className="text-white  leading-tight w-[100px] xl:text-9xl text-4xl">
             All Works
@@ -83,18 +77,24 @@ export const WorkPageIndex = () => {
           />
         ) : null}
 
-        <div className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12">
-          {filteredData.map((project, ind) => (
-            <WorkProjectCard
-              key={ind}
-              link={project.link}
-              title={project.title}
-              description={project.description}
-              image={project.image2}
-              tags={project.tags}
-            />
-          ))}
-        </div>
+        {filteredData?.length > 0 ? (
+          <div className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12">
+            {filteredData.map((project, ind) => (
+              <WorkProjectCard
+                key={ind}
+                link={project.link}
+                title={project.title}
+                description={project.description}
+                image={project.image2}
+                tags={project.tags}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="inline-block py-12 md:py-20 text-zinc-200 md:text-3xl text-lg text-center border rounded-xl w-full border-zinc-700">
+            Coming Soon...
+          </div>
+        )}
       </div>
     </PageContainer>
   );

@@ -23,7 +23,7 @@ export const HeroSection = () => {
           "
           >
             <div className="rounded-full w-[66px] h-[66px] lg:w-[180px] md:w-[110px] md:h-[110px] lg:h-[180px] overflow-hidden">
-              <Image src="/images/me.png" alt="me" width={200} height={200} />
+              <Image src="/images/me1.jpg" alt="me" width={200} height={200} />
             </div>
             <h1 className=" text-white md:text-[6rem] text-[3rem] sm:text-[4rem] lg:text-[9rem] xl:text-[rem]">
               Ifemezuo
@@ -51,7 +51,7 @@ export const HeroSection = () => {
                   <span className="text-stone-500">gner</span>
                 </h3>
                 <p className=" md:text-lg text-white font-light">
-                  I`am a independent digital designer and webflow expert.
+                  I`am a independent digital designer and webflow enthusiast.
                 </p>
               </div>
             </div>
@@ -66,7 +66,7 @@ export const HeroSection = () => {
                   <span className="text-stone-500">Loper</span>
                 </h3>
                 <p className=" md:text-lg text-white font-light">
-                  I`am a independent digital designer and webflow expert.
+                  A Front end Developer with 5 years in software development.
                 </p>
               </div>
             </div>

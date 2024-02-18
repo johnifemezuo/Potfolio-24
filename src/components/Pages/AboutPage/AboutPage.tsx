@@ -10,7 +10,7 @@ import { WorkTimeLine } from "./WorkTimeLine";
 export const AboutPage = () => {
   return (
     <PageContainer>
-      <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[70vh] md:h-[70vh] lg:h-[86vh] xl:h-[100vh] py-8 md:py-14 md:p-8 md:px-3 lg:12 xl:px-12">
+      <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[80vh] md:h-[70vh] lg:h-[86vh] xl:h-[100vh] py-8 md:py-14 md:p-8 md:px-3 lg:12 xl:px-12">
         <div className="flex space-x-4 items-center md:space-x-12 ml-6 m md:-mt-12 mb-4">
           <ArrowRight className="text-white items-center h-8 md:h-14 w-8 md:w-14 -mt-12" />
 
@@ -25,9 +25,9 @@ export const AboutPage = () => {
         </div>
 
         <div className="md:flex space-x-4 md:space-x-44 space-y-4">
-          <div className="mx-auto md:mx-0 bg-red-100 w-[130px] rounded-full h-[130px] lg:w-[540px] md:w-[610px]  md:h-[310px] lg:h-[380px] overflow-hidden">
+          <div className="mx-auto md:mx-0 bg-gray-600 w-[130px] rounded-full h-[130px] lg:w-[540px] md:w-[610px]  md:h-[310px] lg:h-[360px] overflow-hidden">
             <Image
-              src="/images/me.png"
+              src="/images/me2.jpg"
               alt="me"
               width={500}
               className="object-cover w-full h-full"
@@ -36,7 +36,7 @@ export const AboutPage = () => {
           </div>
 
           <div className="w-full  ">
-            <div className="flex--items space-x-4 md:space-x-12">
+            <div className="flex--items space-x-6 md:space-x-24">
               <div className="flex items-center space-x-3">
                 <span>
                   <RoundedArt className="w-[25px] md:w-[35px] h-[25px] md:h-[35px]" />
@@ -65,10 +65,14 @@ export const AboutPage = () => {
             </div>
 
             <div className="pt-0 md:pt-12">
-              <p className="text-zinc-500 tracking-tighter  text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-6xl leading-8 md:leading-10">
-                I enjoy creating new visions and trying{" "}
-                <span className="text-white">different visual techniques.</span>{" "}
-                Therefore, you can find many experiments.
+              <p className="text-zinc-500 tracking-tighter  text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-5xl leading-8 md:leading-10">
+                I have always loved creating and surprising others. This
+                experience helped me become a pro at designing and developing.
+                <span className="text-white">
+                  I consider design to be my true calling, Which I have been
+                  doing for many years.
+                </span>
+                Creating web interface and softwares that user will love using.
               </p>
             </div>
           </div>
@@ -76,12 +80,13 @@ export const AboutPage = () => {
       </div>
 
       <div>
-        <div className="py-6">
+        <div className="py-4">
           <p className="text-zinc-500 tracking-tighter text-2xl md:text-3xl lg:text-4xl py-0 md:py-12 xl:space-y-8 xl:text-5xl leading-8 md:leading-10">
-            I find the
-            <span className="text-white">balance between art and</span>{" "}
-            functionality and strive to incorporate this vision into each of my
-            projects.{" "}
+            My goal as a designer is to fuse creativity with analytical thinking
+            <span className="text-white">
+              {" "}
+              to deliver intuitive solutions for all users{" "}
+            </span>
             <span className="text-white">
               As a result, my work captivates both my clients
             </span>{" "}
@@ -89,44 +94,68 @@ export const AboutPage = () => {
           </p>
         </div>
 
+        <div className="py-4 mb-4">
+          <p className="text-zinc-500 tracking-tighter text-2xl md:text-3xl lg:text-4xl py-0 md:py-12 xl:space-y-8 xl:text-5xl leading-8 md:leading-10">
+            Am equally a software Engineer with 5 years experience in designing
+            and building softwares.
+            <span className="text-white">
+              {" "}
+              I love to solve problems and i help businesses
+            </span>{" "}
+            <span className="text-white">
+              and agencies solve complex user interface problems
+            </span>{" "}
+            where i utilize my skills to create a solution.
+          </p>
+        </div>
+
+        <a
+          href="/"
+          download
+          className="border mt-12 hover:bg-zinc-800 transition-all text-zinc-400 border-zinc-700 rounded-xl p-4 md:w-auto w-full sm:inline-block space-y-2 md:p-4  
+        "
+        >
+          Download CV
+        </a>
+      </div>
+
+      <div>
         {/*================ Design Steps =================== */}
-        <div className="py-8 md:py-20">
+        <div className="py-16 md:py-20">
           <p className="text-zinc-200 tracking-tighter  min-w-[200px]  text-3xl md:text-3xl lg:text-4xl pb-6 xl:space-y-8 xl:text-7xl leading-10">
             My Design process.
           </p>
 
           <div className="gap-3  flex flex-wrap">
             <DesignStepCard
-            num="01"
+              num="01"
               title="Project brief & Ideation"
               description="Understanding problem statement and idea generation."
             />
             <DesignStepCard
-            num="02"
+              num="02"
               title="Research"
               description="User Research, Competitive Research, User Persona. User Flow..."
             />
             <DesignStepCard
-            num="03"
+              num="03"
               title="Design and Prototype"
               description="Designing highly Aesthetically pleasing and useable interface and prototyping for simulation."
             />
             <DesignStepCard
-            num="04"
-
+              num="04"
               title="User Testing"
               description="Testing with users. Modify and iterate user feedback into design."
             />
             <DesignStepCard
-            num="05"
-
+              num="05"
               title="Development"
               description="Develop the user interface with recent and standard Front end frames like Nextjs, Reactjs or ReactNative."
             />
             <DesignStepCard
-            num="06"
+              num="06"
               title="Client/Hand Off"
-              description="Project is deployed or handed over."
+              description="Project is deployed or handed off."
             />
           </div>
         </div>
@@ -140,16 +169,22 @@ export const AboutPage = () => {
 
           <div>
             <WorkTimeLine
-              company="Zigah.co"
-              role="Front end Engineer"
-              year="2022 - 2024"
-              image="/images/proj2.png"
+              company="Osmaxin"
+              role="UI/UX Designer & Front end Developer"
+              year="2019 - 2024"
+              image="/images/rendlr/Thumbnail.png"
             />
             <WorkTimeLine
               company="Ventlio"
               role="UI/UX Designer"
               year="2021 - 2024"
-              image="/images/proj1.png"
+              image="/images/zigah/Homepage.png"
+            />
+            <WorkTimeLine
+              company="Zigah.co"
+              role="Front end Engineer"
+              year="2022 - 2024"
+              image="/images/zigah/zigah-mock.png"
             />
           </div>
         </div>

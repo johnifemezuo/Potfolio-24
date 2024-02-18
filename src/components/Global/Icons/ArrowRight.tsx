@@ -1,5 +1,6 @@
 export const ArrowRight = ({ className }: { className?: string }) => {
-  return (<svg
+  return (
+  <svg
     className={className}
     width="69"
     height="55"
@@ -13,5 +14,6 @@ export const ArrowRight = ({ className }: { className?: string }) => {
     <path
       d="M4.96015 3C4.96015 1.63027 3.84977 0.519893 2.48004 0.519893C1.11032 0.519893 -6.52668e-05 1.63027 -6.53267e-05 3L4.96015 3ZM-6.53267e-05 3L-6.69003e-05 39L4.96015 39L4.96015 3L-6.53267e-05 3Z"
     />
-  </svg>)
+  </svg>
+  )
 };

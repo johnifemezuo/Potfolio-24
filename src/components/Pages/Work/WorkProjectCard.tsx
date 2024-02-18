@@ -39,17 +39,17 @@ export const WorkProjectCard = ({
         />
       </div>
       <div className="py-3 border-t mt-5 lg:flex w-full justify-between items-center">
-        <h3 className="text-2xl md:text-3xl font-semibold text-white  grid h-8 overflow-hidden md:min-w-[130px]">
+        <h3 className="text-2xl md:text-3xl font-semibold text-white  grid h-9 overflow-hidden md:min-w-[130px]">
           <span
             className={`${
-              onHover ? "translate-y-0 lg:-translate-y-[38px]" : ""
+              onHover ? "translate-y-0 lg:-translate-y-[40px] pb-1" : ""
             }  transition-transform duration-500`}
           >
             {title}
           </span>
           <span
             className={`${
-              onHover ? "translate-y-0 lg:-translate-y-[38px]" : ""
+              onHover ? "translate-y-0 lg:-translate-y-[40px]" : ""
             }  transition-transform duration-500`}
           >
             {title}

@@ -1,24 +1,33 @@
-
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./styles/globals.css";
 import { Layout } from "@/components";
+import { Toaster } from "react-hot-toast";
 
-const poppins = Poppins({
+const poppins = Manrope({
   subsets: ["latin"],
   display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["200", "300", "400", "500", "600", "700", "800",],
 });
+
 export const metadata: Metadata = {
-  title: "John Portfolio/24",
-  description: "Senior Designer and Developer Portfolio",
+  title: "John Ifemezuo",
+  description: "Product Designer and Front end Developer",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/me-tab.png" />
+      </head>
       <body className={poppins.className}>
-        <>{children}</>
+        {children}
+        <Toaster />
       </body>
     </html>
   );

@@ -3,7 +3,8 @@ import { IProject } from "./";
 export const projects: IProject[] = [
   {
     title: "Rendlr",
-    description:"An online dating app with great user experience and aesthetics.",
+    description:
+      "An online dating app with great user experience and aesthetics.",
     link: "/work/rendlr",
     image: "/images/rendlr/rendlr-cover.png",
     image2: "/images/rendlr/rendlr-cover2.png",
@@ -14,21 +15,21 @@ export const projects: IProject[] = [
   {
     title: "Moonlight",
     description:
-      "An online dating app with great user experience and aesthetics.",
+      "A modern day dating app for all. Experience connection and have fun",
     link: "/work/moonlight",
-    image: "/images/moonlight/moonlight-cover.png",
-    image2: "/images/moonlight/moonlight-thumbnail.png",
+    image: "/images/moonlight/moon.png",
+    image2: "/images/moonlight/moon.png",
     category: "design",
     tags: ["Product Design", "Mobile App", "2023"],
   },
   {
     title: "Zigah",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elitror nescObcaecati iure quasi a expeditaEum, alias!",
-    link: "/work/rendlr",
-    image: "/images/rendlr/rendlr-cover.png",
-    image2: "/images/webs.webp",
+      "Unlock boundless possibilities with Zigah, your global money transfer solution.",
+    link: "/work/zigah",
+    image: "/images/zigah/zigah-mock.png",
+    image2: "/images/zigah/zigah-mock2.png",
     category: "development",
-    tags: ["Product Design", "Mobile Design"],
+    tags: ["Front end Development", "2023"],
   },
 ];
