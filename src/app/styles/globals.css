@@ -2,7 +2,7 @@
   --background-bg: #070505;
   --border-color: #312f2f;
   --accent-color: #98843a;
-  --yellow-color: #D1EF1A;
+  --yellow-color: #d1ef1a;
 }
 
 body {
@@ -41,6 +41,23 @@ body {
   );
 }
 
+/* animation */
+.spinnerLoop {
+  animation-name: spin;
+  animation-duration: 26s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -60,11 +77,11 @@ body {
   }
 
   .rounded-border-btn {
-    @apply border uppercase border-stone-300 text-xs   rounded-full px-4 py-2 md:px-6 md:py-3 text-stone-300 lg:text-base inline-block text-center font-medium w-auto
+    @apply border uppercase border-stone-300 text-xs   rounded-full px-4 py-2 md:px-6 md:py-3 text-stone-300 lg:text-base inline-block text-center font-medium w-auto;
   }
 
   .small-rounded-border-btn {
-    @apply border rounded-full px-4 py-2.5 border-zinc-400 hover:text-white transition-all hover:border-white text-zinc-400 font-light text-sm
+    @apply border rounded-full px-4 py-2.5 border-zinc-400 hover:text-white transition-all hover:border-white text-zinc-400 font-light text-sm;
   }
   @variants responsive {
     /* Hide scrollbar for Chrome, Safari and Opera */
