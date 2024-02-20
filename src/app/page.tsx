@@ -1,11 +1,6 @@
+
 import {
-  ExceptOne,
-  ExceptTwo,
-  HeroSection,
-  Layout,
-  Playground,
-  SelectedWorks,
-  WorkSection,
+  HomepageIndex,
 } from "@/components";
 import Head from "next/head";
 
@@ -16,13 +11,7 @@ export default function Home() {
         <title>John Ifemezuo | Portfolio</title>
       </Head>
 
-      <Layout>
-        <HeroSection />
-        <ExceptOne />
-        <WorkSection />
-        <SelectedWorks />{/* <Reviews /> */}
-        <Playground />
-      </Layout>
+      <HomepageIndex />
     </>
   );
 }

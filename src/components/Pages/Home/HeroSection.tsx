@@ -9,30 +9,36 @@ import {
 } from "@/components";
 import Image from "next/image";
 import { gsap } from "gsap";
-import { useEffect, useLayoutEffect, useRef } from "react";
-
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 export const HeroSection = () => {
-  useEffect(() => {
+
+  gsap.registerPlugin(ScrollTrigger) 
+
+  const container = useRef(null);
+
+  useGSAP(() => {
     const tl = gsap.timeline();
     tl.fromTo(
       "#heroTitle",
-      { duration: 1.6, opacity: 0, y: 70, ease: "Power3.easeOut" },
+      { duration: 3, opacity: 0, y: 80, ease: "Power3.easeOut" },
       {
         opacity: 1,
         y: 0,
-        stagger: 0.2,
+        stagger: 0.4,
       }
     );
 
-    gsap.fromTo(
+    tl.fromTo(
       "#heroImg",
       {
-        duration: 3,
+        duration: 5,
         opacity: 0,
-        y: 70,
+        y: 100,
         scale: 0.4,
         ease: "Power3.easeOut",
-        delay: 4,
+        delay: 6,
       },
       {
         opacity: 1,
@@ -40,11 +46,44 @@ export const HeroSection = () => {
         scale: 1,
       }
     );
-  }, []);
+
+    tl.fromTo(
+      "#careerTitle",
+      {
+        duration: 9,
+        opacity: 0,
+        y: 100,
+        scale: 0.4,
+        ease: "Power3.easeOut",
+        delay: 6,
+      },
+      {
+        stagger: 0.2,
+        opacity: 1,
+        y: 0,
+        scale: 1,
+      }
+    );
+
+    tl.fromTo(
+      "#arrow",
+      {
+        duration: 6,
+        opacity: 0,
+        ease: "Power3.easeOut",
+        delay: 3,
+      },
+      {
+        opacity: 1,
+      }
+    );
+
+  }, {scope: container});
 
   return (
     <PageContainer>
       <div
+        ref={container}
         id="top"
         className="relative rounded-xl border border-[#312F2F] h-[90vh] py-20 md:py-14 md:p-8 px-3 lg:12 xl:px-20
       "
@@ -78,7 +117,10 @@ export const HeroSection = () => {
         </div>
 
         <div className="mt-12 md:mt-20 lg:space-x-[15%]  lg:flex">
-          <div className=" justify-center  lg:inline-block text-center hidden">
+          <div
+            id="arrow"
+            className=" justify-center  lg:inline-block text-center hidden"
+          >
             <p className="uppercase w-[127px] text-lg font-light  mb-6 text-stone-400">
               Scroll down
             </p>
@@ -87,7 +129,7 @@ export const HeroSection = () => {
           </div>
 
           <div className="md:flex lg:max-w-[900px] justify-between mx-auto md:space-x-6 space-y-8 md:space-y-0">
-            <div className="flex space-x-3">
+            <div id="careerTitle" className="flex space-x-3">
               <span>
                 <RoundedArt className="w-[25px] md:w-[35px] h-[25px] md:h-[35px] spinnerLoop" />
               </span>
@@ -102,7 +144,7 @@ export const HeroSection = () => {
               </div>
             </div>
 
-            <div className="flex space-x-3">
+            <div id="careerTitle" className="flex space-x-3">
               <span>
                 <RoundedArt className="w-[25px] md:w-[35px] h-[25px] md:h-[35px] spinnerLoop" />
               </span>
