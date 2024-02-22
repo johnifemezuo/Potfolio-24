@@ -8,6 +8,7 @@ import {
 } from "@/components";
 
 export const HomepageIndex = () => {
+  
   return (
     <Layout>
       <HeroSection />
