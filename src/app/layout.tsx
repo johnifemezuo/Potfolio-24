@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
-import "./styles/globals.css";
-import { Layout } from "@/components";
+import { Manrope } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import "./styles/globals.css";
 
 const poppins = Manrope({
   subsets: ["latin"],
@@ -26,7 +25,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/me-tab.png" />
       </head>
       <body className={poppins.className}>
-        <div>{children}</div>
+        {children}
         <Toaster />
       </body>
     </html>

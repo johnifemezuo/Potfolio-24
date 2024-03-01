@@ -1,7 +1,9 @@
 import {
   ExceptOne,
+  ExceptTwo,
   HeroSection,
   Layout,
+  PageContainer,
   Playground,
   SelectedWorks,
   WorkSection,
@@ -16,7 +18,11 @@ export const HomepageIndex = () => {
       <WorkSection />
       <SelectedWorks />
       {/* <Reviews /> */}
-      <Playground />
+      {/* <Playground /> */}
+      <PageContainer>
+        <ExceptTwo />
+      </PageContainer>
+      <div className="py-12" />
     </Layout>
   );
 };

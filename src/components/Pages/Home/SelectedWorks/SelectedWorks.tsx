@@ -1,30 +1,80 @@
+"use client";
+
 import {
   ArrowDownIcon,
   ArrowRight,
   PageContainer,
   ProjectCard,
+  WorkProjectCard,
 } from "@/components";
 import { projects } from "@/contents";
 import Link from "next/link";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export const SelectedWorks = () => {
+  const ref = useRef(null);
+  const refTwo = useRef(null);
+
+  const isInView = useInView(ref, { once: true });
+  const cardInView = useInView(refTwo, { once: true });
+
+  const easeInVariant = {
+    hidden: { x: 60, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  };
+
+  const easeCardVariant = {
+    hideCards: { x: 160, opacity: 0 },
+    showCards: { x: 0, opacity: 1 },
+  };
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
+  useEffect(() => {
+    if (cardInView) {
+      mainControls.start("showCards");
+    }
+  }, [cardInView]);
+
   return (
     <div className="bg-[#110D0D] w-full pt-12 md:pt-20 xl:pt-44">
       <div className="pb-6 md:pb-20">
         <PageContainer>
-          <div className="lg:space-y-20 space-y-6 px-4 py-8 xl:px-20 lg:py-20 border border-border-color rounded-xl">
+          <div
+            ref={ref}
+            className="lg:space-y-20 space-y-6 px-4 py-8 xl:px-20 lg:py-20 border border-border-color rounded-xl"
+          >
             <ArrowRight className="text-white items-center  rotate-90 w-8 h-12 xl:w-20 xl:h-20 md:w-14 md:h-14" />
 
             <div className=" lg:flex--between space-y-5 lg:space-y-0">
-              <h1 className="font-semibold md:max-w-xl text-3xl lg:text-6xl xl:text-8xl  text-stone-100">
+              <motion.h1
+                variants={easeInVariant}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="font-semibold md:max-w-xl text-3xl lg:text-6xl xl:text-8xl  text-stone-100"
+              >
                 Selected Works
-              </h1>
+              </motion.h1>
 
-              <p className="font-extralight text-sm lg:w-[400px] 2xl:w-[500px] sm:text-lg  md:text-lg lg:text-2xl leading-snug text-zinc-100 lg:font-medium">
+              <motion.p
+                variants={easeInVariant}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 0.7, delay: 0.6 }}
+                className="font-extralight text-sm lg:w-[400px] 2xl:w-[500px] sm:text-lg  md:text-lg lg:text-2xl leading-snug text-zinc-100 lg:font-medium"
+              >
                 I have worked on lots of projects, I both Design and Front end
                 development and I have got the receipts to prove it in my
                 portfolio of case studies.
-              </p>
+              </motion.p>
             </div>
           </div>
         </PageContainer>
@@ -42,6 +92,21 @@ export const SelectedWorks = () => {
               tags={project.tags}
             />
           ))}
+
+          {/* <PageContainer>
+            <div className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12 bg-transparent">
+              {projects.map((project, ind) => (
+                <WorkProjectCard
+                  key={ind}
+                  link={project.link}
+                  title={project.title}
+                  description={project.description}
+                  image={project.image2}
+                  tags={project.tags}
+                />
+              ))}
+            </div>
+          </PageContainer> */}
 
           <Link href="/work">
             <div className="lg:w-[600px] relative py-12 lg:py-0 bg-white  grid lg:h-screen place-content-center ">

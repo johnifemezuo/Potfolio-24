@@ -1,4 +1,4 @@
-
+"use client";
 import {
   ArrowRight,
   BehanceIcon,
@@ -11,16 +11,38 @@ import {
   TwitterIcon,
 } from "@/components";
 import Link from "next/link";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export const Footer = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const easeInVariant = {
+    hidden: { y: 60, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+  
   return (
     <PageContainer>
-      <div  id="contact"></div>
+      <div id="contact"></div>
       <FullWidthButton name="Lets Get in touch" />
 
-      <div
+      <motion.div
+        variants={easeInVariant}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+        ref={ref}
         className="xl:flex xl:space-y-0 space-y-8 xl:space-x-6 mt-6 "
-       
       >
         <div className="xl:w-[70%] grid grid-cols-2  gap-4 md:gap-6">
           <SocialCard
@@ -54,7 +76,7 @@ export const Footer = () => {
         </div>
 
         <ContactForm />
-      </div>
+      </motion.div>
 
       {/* Footer */}
       <div className="font-light text-zinc-500 text-sm  md:flex--items justify-between w-full border-border-color mt-4 border text-center  md:text-lg lg:text-xl py-4 md:py-6 px-6 rounded-xl">

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface IWorkStyle {
   image: string;
@@ -21,8 +24,11 @@ export const WorkType = ({
   titleStyle,
 }: IWorkStyle) => {
   return (
-    <div
-      className={`space-x-6 relative  w-full p-4 md:p-6 lg:p-14 rounded-3xl flex  ${bgStyle}`}
+    <motion.div
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 0.9, zIndex: 1 }}
+      transition={{ duration: 0.7 }}
+      className={`space-x-6 relative  w-full p-4 md:p-6 lg:p-14 rounded-3xl flex  cursor-pointer ${bgStyle}`}
     >
       <div className="md:w-[300px] lg:w-[400px] grid justify-center text-center  ">
         <Image
@@ -47,6 +53,6 @@ export const WorkType = ({
       >
         {num}
       </h1>
-    </div>
+    </motion.div>
   );
 };

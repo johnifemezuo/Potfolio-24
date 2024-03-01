@@ -1,16 +1,56 @@
+"use client";
+
 import { ArrowDownIcon, ArrowRight, PageContainer } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import { WorkType } from "./WorkType";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export const WorkSection = () => {
+  const ref = useRef(null);
+  const refTwo = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const cardInView = useInView(refTwo, { once: true });
+
+  const easeInVariant = {
+    hidden: { y: 100, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
+  const easeCardVariant = {
+    hideCards: { x: 160, opacity: 0 },
+    showCards: { x: 0, opacity: 1 },
+  };
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
+  useEffect(() => {
+    if (cardInView) {
+      mainControls.start("showCards");
+    }
+  }, [cardInView]);
+
   const btnStyle =
     "border uppercase border-stone-300 text-xs lg:text-base 2xl:text-lg rounded-full px-4 py-2 md:px-6 md:py-3 text-stone-300 lg:text-base inline-block text-center font-medium";
 
   return (
-    <div className="lg:pb-20">
+    <div className="lg:pb-20 overflow-x-hidden">
       <PageContainer>
-        <div className="space-y-6 xl:space-y-0 justify-between px-4 md:py-8 md:px-6 2xl:px-20 py-4 xl:px-12 xl:py-12 2xl:py-20 border border-border-color rounded-xl xl:flex items-center">
+        <motion.div
+          variants={easeInVariant}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          ref={ref}
+          className="space-y-6 xl:space-y-0 justify-between px-4 md:py-8 md:px-6 2xl:px-20 py-4 xl:px-12 xl:py-12 2xl:py-20 border border-border-color rounded-xl xl:flex items-center"
+        >
           <h1 className="text-2xl  md:text-5xl 2xl:text-[5rem] xl:text-[3rem] font-light text-white">
             What i do best
           </h1>
@@ -21,11 +61,23 @@ export const WorkSection = () => {
             <span className={btnStyle}>Front end Engineer</span>
             <span className={btnStyle}>Mobile Developer</span>
           </div>
-        </div>
+        </motion.div>
       </PageContainer>
 
-      <div className="w-full pb-12 xl:pb-20 ">
-        <div className="grid no-scrollbar w-full mt-14 xl:mt-44 md:flex gap-5 md:gap-0 md:space-x-12 px-3 xl:px-12">
+      <div ref={refTwo} className="w-full pb-12 xl:pb-20 ">
+        <motion.div
+          variants={easeCardVariant}
+          initial="hideCards"
+          animate={mainControls}
+          transition={{
+            duration: 1.1,
+            delay: 0.2,
+            staggerChildren: 1,
+            ease: "easeInOut",
+            bounce: 0.8,
+          }}
+          className="grid no-scrollbar w-full mt-14 xl:mt-44 md:flex gap-5 md:gap-0 md:space-x-12 px-3 xl:px-12"
+        >
           <div className="grid md:justify-end ">
             <h1 className="md:w-[200px] text-white lg:text-5xl md:text-3xl text-2xl xl:w-[300px]">
               How I can be of help
@@ -90,7 +142,7 @@ export const WorkSection = () => {
               03
             </h1>
           </div> */}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
