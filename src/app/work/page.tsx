@@ -3,14 +3,16 @@ import Head from "next/head";
 import React from "react";
 
 function WorkPage() {
-  <Head>
-    <title>John Ifemezuo | Works</title>
-  </Head>;
-
   return (
-    <Layout>
-      <WorkPageIndex />;
-    </Layout>
+    <>
+      <Head>
+        <title>John Ifemezuo | Works</title>
+      </Head>
+      
+      <Layout>
+        <WorkPageIndex />;
+      </Layout>
+    </>
   );
 }
 

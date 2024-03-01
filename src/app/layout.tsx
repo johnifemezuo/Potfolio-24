@@ -7,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 const poppins = Manrope({
   subsets: ["latin"],
   display: "swap",
-  weight: ["200", "300", "400", "500", "600", "700", "800",],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/me-tab.png" />
       </head>
       <body className={poppins.className}>
-        {children}
+        <div>{children}</div>
         <Toaster />
       </body>
     </html>

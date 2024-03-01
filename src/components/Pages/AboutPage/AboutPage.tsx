@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowRight,
   DesignStepCard,
@@ -6,26 +8,63 @@ import {
 } from "@/components";
 import Image from "next/image";
 import { WorkTimeLine } from "./WorkTimeLine";
+import { motion } from "framer-motion";
 
 export const AboutPage = () => {
   return (
     <PageContainer>
       <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[80vh] md:h-[70vh] lg:h-[86vh] xl:h-[100vh] py-8 md:py-14 md:p-8 md:px-3 lg:12 xl:px-12">
         <div className="flex space-x-4 items-center md:space-x-12 ml-6 m md:-mt-12 mb-4">
-          <ArrowRight className="text-white items-center h-8 md:h-14 w-8 md:w-14 -mt-12" />
+          <motion.div
+            initial={{
+              x: "-50",
+              opacity: 0,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{ duration: 0.8, bounce: 0.8}}
+          >
+            <ArrowRight className="text-white items-center h-8 md:h-14 w-8 md:w-14 -mt-12" />
+          </motion.div>
 
-          <h1 className="flex space-x-3 ">
+          <motion.h1
+            initial={{
+              y: 90,
+              opacity: 0,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{delay: 0.5, duration: 0.8, bounce: 0.3 }}
+            className="flex space-x-3 "
+          >
             <span className="text-white text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
               I`m
-            </span>{" "}
+            </span>
             <span className="text-stone-500  text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
               John
             </span>
-          </h1>
+          </motion.h1>
         </div>
 
         <div className="md:flex space-x-4 md:space-x-44 space-y-4">
-          <div className="mx-auto md:mx-0 bg-gray-600 w-[130px] rounded-full h-[130px] lg:w-[540px] md:w-[610px]  md:h-[310px] lg:h-[360px] overflow-hidden">
+          <motion.div
+            initial={{
+              scale: 0.5,
+              y: 20,
+              opacity: 0,
+            }}
+            animate={{
+              scale: 1,
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{delay: 0.7, duration: 1, bounce: 0.3 }}
+            className="mx-auto md:mx-0 bg-gray-600 w-[130px] rounded-full h-[130px] lg:w-[540px] md:w-[610px]  md:h-[310px] lg:h-[360px] overflow-hidden"
+          >
             <Image
               src="/images/me2.jpg"
               alt="me"
@@ -33,10 +72,21 @@ export const AboutPage = () => {
               className="object-cover w-full h-full"
               height={700}
             />
-          </div>
+          </motion.div>
 
           <div className="w-full  ">
-            <div className="flex--items space-x-6 md:space-x-24">
+            <motion.div
+              initial={{
+                y: 50,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{ delay: 0.7, duration: 1, bounce: 0.3 }}
+              className="flex--items space-x-6 md:space-x-24"
+            >
               <div className="flex items-center space-x-3">
                 <span>
                   <RoundedArt className="w-[25px] md:w-[35px] h-[25px] md:h-[35px]" />
@@ -62,9 +112,20 @@ export const AboutPage = () => {
                   </h3>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="pt-0 md:pt-12">
+            <motion.div
+              initial={{
+                y: 50,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{ delay: 1, duration: 1, staggerChildren: 0.6 }}
+              className="pt-0 md:pt-12"
+            >
               <p className="text-zinc-500 tracking-tighter  text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-5xl leading-8 md:leading-10">
                 I have always loved creating and surprising others. This
                 experience helped me become a pro at designing and developing.
@@ -74,7 +135,7 @@ export const AboutPage = () => {
                 </span>
                 Creating web interface and softwares that user will love using.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
