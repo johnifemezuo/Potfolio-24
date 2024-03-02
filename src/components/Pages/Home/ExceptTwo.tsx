@@ -1,3 +1,4 @@
+"use client"
 import { PageContainer } from "@/components";
 import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
