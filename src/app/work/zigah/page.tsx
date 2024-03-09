@@ -1,3 +1,5 @@
+"use client";  
+
 import { ZigahIndex } from "@/components";
 import Head from "next/head";
 import React from "react";

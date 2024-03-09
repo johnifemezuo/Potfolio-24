@@ -39,18 +39,18 @@ export const WorkProjectCard = ({
         />
       </div>
       <div className="py-3 border-t mt-5 lg:flex w-full justify-between items-center">
-        <h3 className="text-2xl md:text-3xl font-semibold text-white  grid h-9 overflow-hidden md:min-w-[130px]">
+        <h3 className="text-2xl md:space-y-2 md:text-5xl font-semibold text-white grid h-12 md:h-14 overflow-hidden md:min-w-[160px] md:pb-2">
           <span
             className={`${
-              onHover ? "translate-y-0 lg:-translate-y-[40px] pb-1" : ""
+              onHover ? "translate-y-0 lg:-translate-y-[60px]" : ""
             }  transition-transform duration-500`}
           >
             {title}
           </span>
           <span
             className={`${
-              onHover ? "translate-y-0 lg:-translate-y-[40px]" : ""
-            }  transition-transform duration-500`}
+              onHover ? "translate-y-0 lg:-translate-y-[60px]" : ""
+            }  transition-transform duration-500 hidden md:block`}
           >
             {title}
           </span>
@@ -75,7 +75,7 @@ export const WorkProjectCard = ({
           <p
             className={`${
               onHover ? "translate-y-0 lg:-translate-y-[60px]" : ""
-            } duration-500 hidden lg:block tracking-tighter transition-all w-full text-xs md:text-base md:text-right text-zinc-400 font-light 
+            } duration-500 hidden lg:block tracking-tight transition-all w-full text-base md:text-xl md:text-right text-zinc-300 
           `}
           >
             {description}

@@ -1,17 +1,16 @@
-import { PageContainer, SingleWorkTopNavigation } from "@/components";
+"use client";
+import { SingleWorkTopNavigation } from "@/components";
 
 export default function LayoutWithNavAndFooter({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
-  {
-    return (
-      <div>
-        <SingleWorkTopNavigation />
+}>) {
+  return (
+    <div>
+      <SingleWorkTopNavigation />
 
-        {children}
-      </div>
-    );
-  }
+      {children}
+    </div>
+  );
 }

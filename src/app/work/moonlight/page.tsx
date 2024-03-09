@@ -1,3 +1,5 @@
+"use client";  
+
 import { MoonlightIndex } from "@/components";
 import Head from "next/head";
 import React from "react";

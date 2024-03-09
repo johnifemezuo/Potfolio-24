@@ -73,7 +73,7 @@ export const ContactForm = () => {
 
         <div className="pt-12 md:pt-10 lg:space-y-3">
           <p className="text-zinc-400 font-extralight text-lg lg:text-2xl">
-            Email
+            Email Me...
           </p>
           <div className="flex--items space-x-4">
             {/* <ArrowRight className="w-5 md:w-10 rotate-9 text-white" /> */}

@@ -1,3 +1,5 @@
+"use client"
+
 import { AboutPage, Layout } from "@/components";
 import React from "react";
 

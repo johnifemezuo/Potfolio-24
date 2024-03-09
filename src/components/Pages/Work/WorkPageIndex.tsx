@@ -5,6 +5,8 @@ import { WorkSidebar } from "./WorkSidabar";
 import { WorkProjectCard } from "./WorkProjectCard";
 import { IProject, projects } from "@/contents";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import Reveal from "@/components/Global/Animation/Reveal";
 
 export const WorkPageIndex = () => {
   const [filteredData, setFilteredData] = useState<IProject[]>(projects);
@@ -30,21 +32,62 @@ export const WorkPageIndex = () => {
   return (
     <PageContainer>
       <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[50vh] md:h-[68vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12">
-        <div className="flex space-x-4">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+            delay: 0.8,
+          }}
+          className="flex space-x-4"
+        >
           <h1 className="text-white  leading-tight w-[100px] xl:text-9xl text-4xl">
             All Works
           </h1>
-        </div>
+        </motion.div>
 
-        <div className="h-0.5 bg-white w-full my-4"></div>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.4,
+          }}
+          className="h-0.5 bg-white w-full my-4"
+        ></motion.div>
 
-        <div className="flex space-x-4 float-right relative">
-          <h1 className="text-white  leading-tight xl:text-8xl text-4xl">
-            Designing <br /> The Future
-          </h1>
-        </div>
+        <Reveal delay={0.4} duration={0.8}>
+          <div className="flex space-x-4 float-right relative">
+            <h1 className="text-white  leading-tight xl:text-8xl text-4xl">
+              Designing <br /> The Future
+            </h1>
+          </div>
+        </Reveal>
 
-        <div className="flex absolute bottom-0 md:bottom-6 left-0 px-4 py-4 flex-wrap md:flex-nowrap gap-3  md:left-5">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+            delay: 0.8,
+          }}
+          className="flex absolute bottom-0 md:bottom-6 left-0 px-4 py-4 flex-wrap md:flex-nowrap gap-3  md:left-5"
+        >
           <BigButton
             title="All Work"
             active={selectedCategory === "all"}
@@ -56,16 +99,16 @@ export const WorkPageIndex = () => {
             onClick={() => filterByCategory("design")}
           />
           <BigButton
-            title="Webflow"
-            active={selectedCategory === "webflow"}
-            onClick={() => filterByCategory("webflow")}
+            title="Framer"
+            active={selectedCategory === "framer"}
+            onClick={() => filterByCategory("framer")}
           />
           <BigButton
             title="Development"
             active={selectedCategory === "development"}
             onClick={() => filterByCategory("development")}
           />
-        </div>
+        </motion.div>
       </div>
 
       <div className="flex mb-32">

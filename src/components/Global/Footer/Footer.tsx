@@ -42,8 +42,10 @@ export const Footer = () => {
         animate={mainControls}
         transition={{ duration: 0.7, ease: "easeInOut" }}
         ref={ref}
-        className="xl:flex xl:space-y-0 space-y-8 xl:space-x-6 mt-6 "
+        className=" xl:flex xl:space-y-0 space-y-8 xl:space-x-6 mt-6 "
       >
+        <ContactForm />
+
         <div className="xl:w-[70%] grid grid-cols-2  gap-4 md:gap-6">
           <SocialCard
             name="Behance"
@@ -75,7 +77,6 @@ export const Footer = () => {
           />
         </div>
 
-        <ContactForm />
       </motion.div>
 
       {/* Footer */}

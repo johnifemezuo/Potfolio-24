@@ -24,27 +24,26 @@ export const WorkType = ({
   titleStyle,
 }: IWorkStyle) => {
   return (
-    <motion.div
-      initial={{ scale: 1 }}
-      whileHover={{ scale: 0.9, zIndex: 1 }}
-      transition={{ duration: 0.7 }}
+    <div
       className={`space-x-6 relative  w-full p-4 md:p-6 lg:p-14 rounded-3xl flex  cursor-pointer ${bgStyle}`}
     >
-      <div className="md:w-[300px] lg:w-[400px] grid justify-center text-center  ">
+      <div className="md:w-[300px] lg:min-w-[230px]   grid justify-center text-center  ">
         <Image
           src={image}
-          className="mx-auto rounded-full lg:w-[150px] w-[100px] h-[100px] lg:h-[150px] object-cover"
+          className="mx-auto rounded-full lg:w-[200px] w-[100px] h-[100px] lg:h-[200px] object-cover"
           alt="uiux"
-          width={200}
-          height={200}
+          width={250}
+          height={250}
         />
 
-        <h1 className={` text-lg lg:text-[2rem] mt-12 ${titleStyle}`}>
+        <h1
+          className={` text-lg lg:text-4xl font-medium min-w-[100px] mt-12 ${titleStyle}`}
+        >
           {title}
         </h1>
       </div>
 
-      <p className={`text-white text-sm md:text-base lg:text-lg ${descStyle}`}>
+      <p className={`text-white text-sm md:text-xl lg:text-2xl ${descStyle}`}>
         {description}
       </p>
 
@@ -53,6 +52,6 @@ export const WorkType = ({
       >
         {num}
       </h1>
-    </motion.div>
+    </div>
   );
 };

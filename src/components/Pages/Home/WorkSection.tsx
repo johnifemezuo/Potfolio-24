@@ -76,20 +76,19 @@ export const WorkSection = () => {
             ease: "easeInOut",
             bounce: 0.8,
           }}
-          className="grid no-scrollbar w-full mt-14 xl:mt-44 md:flex gap-5 md:gap-0 md:space-x-12 px-3 xl:px-12"
+          className="grid no-scrollbar w-full mt-14 xl:mt-44 gap-5 md:gap-0 md:space-y-7 px-3 xl:px-12"
         >
-          <div className="grid md:justify-end ">
-            <h1 className="md:w-[200px] text-white lg:text-5xl md:text-3xl text-2xl xl:w-[300px]">
-              How I can be of help
+          <div className="md:flex md:justify-start ">
+            <ArrowRight className="w-[35px] md:w-[68px] md:h-[54px] lg:w-[150px] md:-ml-10 text-white rotate-90 mt-5" />
+            <h1 className="md:w-[200px] text-white lg:text-5xl md:text-3xl text-3xl xl:w-[300px]">
+              How Can I Assist You
             </h1>
-
-            <ArrowRight className="w-[50px] md:w-[68px] md:h-[68px] lg:w-[180px]  text-white" />
           </div>
 
           {/* card 1 */}
           <div className="grid md:grid-cols-2 gap-5 md:gap-9">
             <WorkType
-              title="Designer"
+              title="Design"
               description="DESIGN SERVICES ARE FOCUSED ON TRANSFORMING THE ESSENCE OF YOUR BRAND
         INTO A VISUALLY APPEALING AND INTUITIVELY UNDERSTANDABLE ONLINE
         PRESENCE."
@@ -101,8 +100,8 @@ export const WorkSection = () => {
             />
 
             <WorkType
-              title="Developer"
-              description="THROUGH DESIGN EXPERTISE, I CAN TRANSLATE YOUR BRAND'S
+              title="Development"
+              description="THROUGH MY DESIGN EXPERTISE, I CAN TRANSLATE YOUR BRAND'S
               IDENTITY INTO A VISUALLY STUNNING AND INTUITIVE ONLINE PLATFORM
               THAT CAPTIVATES AUDIENCES."
               num="02"

@@ -12,7 +12,7 @@ interface IProjectCard {
 export const ProjectCard = ({ title, desc, img, tags, link }: IProjectCard) => {
   return (
     <Link href={link}>
-      <div className="h-[300px] lg:h-screen md:w-[1500px]  relative group ">
+      <div className="h-[300px] lg:h-screen md:w-[1000px]  relative group ">
         <Image
           src={img}
           alt="project"

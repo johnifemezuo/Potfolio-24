@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowRight,
   Footer,
@@ -11,6 +9,7 @@ import {
 import { projects } from "@/contents";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export const SingleWorkPageLayout = ({
   children,
@@ -41,22 +40,42 @@ export const SingleWorkPageLayout = ({
 
   return (
     <div>
+      {/* <CursorEffect /> */}
       <div className="bg-white  md:pb-44">
+        <div className="py-6 md:py-12" />
         <div className="max-w-[1300px] mx-auto px-4 md:px-0">
           <div className=" py-9 md:py-14 lg:py-28 ">
-            <GridTwoColsContainer>
-              <div className="w-full">
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium">
-                  {title}
-                </h1>
-              </div>
+            {/* <Reveal duration={0.6}> */}
+              <GridTwoColsContainer>
+                <div className="w-full">
+                  <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium">
+                    {title}
+                  </h1>
+                </div>
 
-              <div className="w-full ">
-                <p className="text-lg md:text-xl lg:text-2xl">{description}</p>
-              </div>
-            </GridTwoColsContainer>
+                <div className="w-full ">
+                  <p className="text-lg md:text-xl lg:text-2xl">
+                    {description}
+                  </p>
+                </div>
+              </GridTwoColsContainer>
+            {/* </Reveal> */}
 
-            <div className="mt-9 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-12 md:">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 60,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: 0.6,
+              }}
+              className="mt-9 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-12 md:"
+            >
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
                 <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
                   ROLE / SERVICES
@@ -89,12 +108,26 @@ export const SingleWorkPageLayout = ({
                   {year}
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="md:mt-12 mt-20">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.7,
+              delay: 0.8,
+            }}
+            className="md:mt-12 mt-20"
+          >
             <ProjectImagePreview src={src} liveSite={liveSite} />
-          </div>
+          </motion.div>
 
           <div>{children}</div>
         </div>

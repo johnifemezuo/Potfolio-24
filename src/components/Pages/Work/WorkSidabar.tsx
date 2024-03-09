@@ -13,7 +13,7 @@ export const WorkSidebar = ({
   selectedName,
 }: IWorkSidebarProps) => {
   const designs = projects.filter((project) => project.category === "design");
-  const webflows = projects.filter((project) => project.category === "webflow");
+  const webflows = projects.filter((project) => project.category === "framer");
   const developments = projects.filter(
     (project) => project.category === "development"
   );
@@ -67,7 +67,7 @@ export const WorkSidebar = ({
           className="text-white text-lg md:text-3xl font-medium mb-6
           "
         >
-          Webflow
+          Framer
         </h2>
         <div className="space-y-4">
           {webflows?.map((web, ind) => (

@@ -2,6 +2,7 @@
   --background-bg: #070505;
   --border-color: #312f2f;
   --accent-color: #98843a;
+  --accwent-color: #535f09;
   --yellow-color: #d1ef1a;
 }
 
@@ -47,6 +48,16 @@ body {
   animation-duration: 26s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.cursor {
+  background-color: red;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 @keyframes spin {

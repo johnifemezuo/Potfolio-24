@@ -123,16 +123,17 @@ export const ZigahIndex = () => {
 
           <div className="space-y-5 md:space-y-8">
             <Para>
-              As the front end engineer I often face the challenge of ensuring
-              that user data is secure and compliant with industry regulations
-              such as GDPR(General data protection Regulations).This involved
-              implementing robust security measures, encryption protocols, and
-              access controls to protect sensitive information.
+              <b className="text-x">1.</b> As the front end engineer I often
+              face the challenge of ensuring that user data is secure and
+              compliant with industry regulations such as GDPR(General data
+              protection Regulations).This involved implementing robust security
+              measures, encryption protocols, and access controls to protect
+              sensitive information.
             </Para>
 
             <Para>
-              <b className="text-x">2.</b>As our company deals with large amount
-              of data that requires complex calculations which can impact
+              <b className="text-x">2.</b> As our company deals with large
+              amount of data that requires complex calculations which can impact
               performance if not done properly.I had to optimize code, implement
               caching strategies, and utilize efficient algorithms to ensure
               fast loading times and smooth user experience.

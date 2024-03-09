@@ -9,76 +9,12 @@ import {
 } from "@/components";
 import Image from "next/image";
 import { gsap } from "gsap";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { motion } from "framer-motion";
 
 export const HeroSection = () => {
-
-
-  // useGSAP(() => {
-  //   const tl = gsap.timeline();
-  //   tl.fromTo(
-  //     "#heroTitle",
-  //     { duration: 3, opacity: 0, y: 80, ease: "Power3.easeOut" },
-  //     {
-  //       opacity: 1,
-  //       y: 0,
-  //       stagger: 0.4,
-  //     }
-  //   );
-
-  //   tl.fromTo(
-  //     "#heroImg",
-  //     {
-  //       duration: 5,
-  //       opacity: 0,
-  //       y: 100,
-  //       scale: 0.4,
-  //       ease: "Power3.easeOut",
-  //       delay: 6,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       y: 0,
-  //       scale: 1,
-  //     }
-  //   );
-
-  //   tl.fromTo(
-  //     "#careerTitle",
-  //     {
-  //       duration: 9,
-  //       opacity: 0,
-  //       y: 100,
-  //       scale: 0.4,
-  //       ease: "Power3.easeOut",
-  //       delay: 6,
-  //     },
-  //     {
-  //       stagger: 0.2,
-  //       opacity: 1,
-  //       y: 0,
-  //       scale: 1,
-  //     }
-  //   );
-
-  //   tl.fromTo(
-  //     "#arrow",
-  //     {
-  //       duration: 6,
-  //       opacity: 0,
-  //       ease: "Power3.easeOut",
-  //       delay: 3,
-  //     },
-  //     {
-  //       opacity: 1,
-  //     }
-  //   );
-
-  // }, {scope: container});
-
   const introTextVariants = {
     from: {
       y: 90,
@@ -91,8 +27,11 @@ export const HeroSection = () => {
     },
   };
 
+  
+
   return (
     <PageContainer>
+    
       <div
         id="top"
         className="relative rounded-xl border border-[#312F2F] h-[90vh] py-20 md:py-14 md:p-8 px-3 lg:12 xl:px-20
@@ -103,12 +42,12 @@ export const HeroSection = () => {
             variants={introTextVariants}
             initial="from"
             animate="to"
-            className="flex space-x-3 "
+            className="flex space-x-3 text-white"
           >
-            <span className="text-white text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
+            <span className=" text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
               I`m
             </span>{" "}
-            <span className="text-stone-500  text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
+            <span className="text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem] ">
               John
             </span>
           </motion.h1>
@@ -170,7 +109,7 @@ export const HeroSection = () => {
                   <span className="text-stone-500">gner</span>
                 </h3>
                 <p className=" md:text-lg text-white font-light">
-                  I`am a independent digital designer and webflow enthusiast.
+                  I`am a independent digital designer and Framer enthusiast.
                 </p>
               </div>
             </div>

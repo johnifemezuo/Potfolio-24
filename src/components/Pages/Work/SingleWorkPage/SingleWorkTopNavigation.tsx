@@ -1,7 +1,6 @@
-"use client";
-
 import { ArrowLeft, LeftArrow, Logo, PageContainer } from "@/components";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export const SingleWorkTopNavigation = ({
   projectTitle,
@@ -11,7 +10,20 @@ export const SingleWorkTopNavigation = ({
   const { push } = useRouter();
 
   return (
-    <div className=" bg-white w-full">
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -120,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.7,
+      }}
+      className=" bg-white w-full absolute top-0 inset-x-0"
+    >
       <PageContainer>
         <div className="py-5 flex items-center justify-between w-full">
           <div className="hidden md:block">
@@ -36,6 +48,6 @@ export const SingleWorkTopNavigation = ({
           </button>
         </div>
       </PageContainer>
-    </div>
+    </motion.div>
   );
 };

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   GridTwoColsContainer,
   Para,
@@ -25,6 +27,8 @@ export const RendlrIndex = () => {
     >
       <div className="space-y-12">
         {/* =================================Problem Statement==================================== */}
+
+        {/* <ScrollReveal> */}
 
         <GridTwoColsContainer className="">
           <div className="grid gap-5 md:gap-12">
@@ -57,7 +61,7 @@ export const RendlrIndex = () => {
             </Para>
           </div>
         </GridTwoColsContainer>
-
+        {/* </ScrollReveal> */}
         {/* =================================Goal==================================== */}
 
         <GridTwoColsContainer className="py-8 border-t md:pt-20">
@@ -105,6 +109,8 @@ export const RendlrIndex = () => {
           </div>
         </GridTwoColsContainer>
 
+        {/* <ScrollReveal> */}
+
         <Image
           src="/images/rendlr/design-process.png"
           alt="john ifemezuo rendlr image"
@@ -112,6 +118,7 @@ export const RendlrIndex = () => {
           className=" w-full h-full object-fill"
           height={1000}
         />
+        {/* </ScrollReveal> */}
 
         {/* =================================Users==================================== */}
 
@@ -162,6 +169,8 @@ export const RendlrIndex = () => {
             </Para>
           </div>
         </GridTwoColsContainer>
+        {/* <ScrollReveal> */}
+
         <Image
           src="/images/rendlr/persona.png"
           alt="john ifemezuo rendlr image"
@@ -169,6 +178,7 @@ export const RendlrIndex = () => {
           className=" w-full h-full object-fill"
           height={1000}
         />
+        {/* </ScrollReveal> */}
 
         {/* =================================User Flow==================================== */}
 
@@ -178,6 +188,7 @@ export const RendlrIndex = () => {
           </div>
         </GridTwoColsContainer>
 
+        {/* <ScrollReveal> */}
         <Image
           src="/images/rendlr/user-flow.png"
           alt="john ifemezuo rendlr image"
@@ -185,6 +196,7 @@ export const RendlrIndex = () => {
           className=" w-full h-full object-fill"
           height={1000}
         />
+        {/* </ScrollReveal> */}
 
         {/* =================================Wire frame==================================== */}
 
@@ -221,6 +233,8 @@ export const RendlrIndex = () => {
           </div>
         </GridTwoColsContainer>
 
+        {/* <ScrollReveal> */}
+
         <Image
           src="/images/rendlr/asserts.png"
           alt="john ifemezuo rendlr image"
@@ -228,6 +242,8 @@ export const RendlrIndex = () => {
           className=" w-full h-full object-fill"
           height={1500}
         />
+        {/* </ScrollReveal> */}
+
         {/* =================================Final Design==================================== */}
 
         <GridTwoColsContainer className=" pt-12 md:pt-20">
@@ -242,6 +258,7 @@ export const RendlrIndex = () => {
           </Para>
         </GridTwoColsContainer>
 
+        {/* <ScrollReveal> */}
         <div className="space-y-5 md:space-y-9">
           <Image
             src="/images/rendlr/fd1.png"
@@ -280,10 +297,13 @@ export const RendlrIndex = () => {
             height={900}
           />
         </div>
+        {/* </ScrollReveal> */}
 
         {/* <div>
         <iframe className="border border-[rgba(0, 0, 0, 0.1)];" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FiP4X6vaFkWmMNdVL45FLm0%2FDating-App%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D164-2654%26viewport%3D404%252C-874%252C0.15%26t%3DlAzwtqpKwHCx1qjQ-1%26scaling%3Dscale-down%26starting-point-node-id%3D299%253A3840%26mode%3Ddesign" allowfullscreen></iframe>
         </div> */}
+
+        {/* <ScrollReveal> */}
 
         <div className="gap-8 md:gap-12 grid">
           <video className=" w-full" width="320" height="240" controls>
@@ -294,8 +314,11 @@ export const RendlrIndex = () => {
             <source src="/videos/rendlr-preview.mp4" type="video/mp4" />
           </video>
         </div>
+        {/* </ScrollReveal> */}
 
         {/* =================================Final Design==================================== */}
+        {/* <ScrollReveal> */}
+
         <div className=" pt-12 md:pt-20 grid gap-5 justify-center align-middle  md:gap-12 place-items-center">
           <h1 className="text-2xl md:text-5xl font-medium mt-12 md:mt-44  pb-20 md:pb-0 text-center">
             Marketing Website
@@ -303,6 +326,7 @@ export const RendlrIndex = () => {
 
           <RoundedButton link="https://www.rendlr.com/" />
         </div>
+        {/* </ScrollReveal> */}
 
         <GridTwoColsContainer className=" pt-12 md:pt-20">
           <h1 className="text-2xl md:text-6xl font-semibold mt-12 md:mt-44  pb-20 md:pb-0">
@@ -328,8 +352,9 @@ export const RendlrIndex = () => {
           </div>
         </GridTwoColsContainer>
 
+        {/* <ScrollReveal> */}
+
         <div className="mt-12">
-          {" "}
           <Image
             src="/images/rendlr/thanks.png"
             alt="john ifemezuo rendlr image"
@@ -338,6 +363,7 @@ export const RendlrIndex = () => {
             height={1200}
           />
         </div>
+        {/* </ScrollReveal> */}
       </div>
     </SingleWorkPageLayout>
   );

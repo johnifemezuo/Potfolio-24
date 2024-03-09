@@ -1,3 +1,4 @@
+export * from "./Animation";
 export * from "./Button";
 export * from "./Buttons";
 export * from "./Containers";

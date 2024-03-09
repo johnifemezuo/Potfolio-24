@@ -9,7 +9,13 @@ import {
 } from "@/components";
 import { projects } from "@/contents";
 import Link from "next/link";
-import { motion, useInView, useAnimation } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useAnimation,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export const SelectedWorks = () => {
@@ -25,8 +31,16 @@ export const SelectedWorks = () => {
   };
 
   const easeCardVariant = {
-    hideCards: { x: 160, opacity: 0 },
-    showCards: { x: 0, opacity: 1 },
+    hideCards: { y: 160, opacity: 0 },
+    showCards: { y: 0, opacity: 1 },
+  };
+
+  const buttonVariant = {
+    hover: {
+      scale: 1.1,
+      yoyo: Infinity,
+      transition: { duration: 0.6, type: "spring", when: "beforeChildren" },
+    },
   };
 
   const mainControls = useAnimation();
@@ -80,48 +94,69 @@ export const SelectedWorks = () => {
         </PageContainer>
       </div>
 
-      <div className="overflow-x-scroll bg-white w-full  ">
-        <div className="lg:flex lg:w-340%] ">
-          {projects?.map((project, i) => (
-            <ProjectCard
-              key={i}
-              title={project.title}
-              img={project.image}
-              desc={project.description}
-              link={project.link}
-              tags={project.tags}
-            />
-          ))}
+      <div className="w-full  ">
+        <div className="">
+          <div className="">
+            {/* {projects?.map((project, i) => (
+              <ProjectCard
+                key={i}
+                title={project.title}
+                img={project.image}
+                desc={project.description}
+                link={project.link}
+                tags={project.tags}
+              />
+            ))} */}
 
-          {/* <PageContainer>
-            <div className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12 bg-transparent">
-              {projects.map((project, ind) => (
-                <WorkProjectCard
-                  key={ind}
-                  link={project.link}
-                  title={project.title}
-                  description={project.description}
-                  image={project.image2}
-                  tags={project.tags}
-                />
-              ))}
-            </div>
-          </PageContainer> */}
+            <PageContainer>
+              <motion.div
+                ref={refTwo}
+                variants={easeCardVariant}
+                initial="hidden"
+                animate={mainControls}
+                className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12 bg-transparent"
+              >
+                {projects.map((project, ind) => (
+                  <WorkProjectCard
+                    key={ind}
+                    link={project.link}
+                    title={project.title}
+                    description={project.description}
+                    image={project.image2}
+                    tags={project.tags}
+                  />
+                ))}
+              </motion.div>
 
-          <Link href="/work">
-            <div className="lg:w-[600px] relative py-12 lg:py-0 bg-white  grid lg:h-screen place-content-center ">
-              <div className="grid justify-items-center space-y-4 lg:space-y-8">
-                <h1 className="text-xl md:text-3xl font-medium lg:text-[3rem] text-zinc-900">
-                  Wait there is more?
-                </h1>
-
-                <button className="flex--items space-x-3 text-zinc-600 hover:text-zinc-700">
-                  <p className="sm:text-xl ">View showcase</p>
-                  <ArrowDownIcon className="-rotate-45 h-4 w-4 lg:w-7 lg:h-7" />
-                </button>
+              <div className="py-7 md:py-12 ">
+                <Link href="/work">
+                  <motion.button
+                    whileHover="hover"
+                    variants={buttonVariant}
+                    className="w-[250px] mx-auto block md:text-lg font-medium px-5 py-3 bg-accent-colorTwo text-zinc-800 rounded-full "
+                  >
+                    See All Work
+                  </motion.button>
+                </Link>
               </div>
-            </div>
-          </Link>
+            </PageContainer>
+
+            {/* <Link href="/work">
+              <div className="relative py-12 lg:py-0 bg-white  grid lg:h-screen place-content-center ">
+                <div className="grid justify-items-center space-y-4 lg:space-y-8">
+                  <h1 className="text-xl md:text-3xl font-medium lg:text-[3rem] text-zinc-900">
+                    Wait there is more?
+                  </h1>
+                 
+
+                  <button className="flex--items space-x-3 text-zinc-600 hover:text-zinc-700">
+                    <p className="sm:text-xl ">View showcase</p>
+                    <ArrowDownIcon className="-rotate-45 h-4 w-4 lg:w-7 lg:h-7" />
+                  </button>
+                </div>
+              </div>
+            </Link> */}
+          </div>
         </div>
       </div>
     </div>
