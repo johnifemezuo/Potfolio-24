@@ -31,7 +31,7 @@ export const WorkPageIndex = () => {
 
   return (
     <PageContainer>
-      <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[50vh] md:h-[68vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12">
+      <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[53vh] md:h-[68vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12">
         <motion.div
           initial={{
             opacity: 0,

@@ -36,7 +36,7 @@ export const CursorEffect = () => {
       }}
       transition={{ stiffness: 100 }}
       animate="default"
-      className=" h-7 w-7 fixed rounded-full top-0 left-0 pointer-events-none z-50 "
+      className=" h-7 w-7 fixed rounded-full top-0 left-0 pointer-events-none z-50 hidden md:block"
     />
   );
 };

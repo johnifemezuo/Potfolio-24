@@ -328,7 +328,7 @@ export const RendlrIndex = () => {
         </div>
         {/* </ScrollReveal> */}
 
-        <GridTwoColsContainer className=" pt-12 md:pt-20">
+        <GridTwoColsContainer className=" pt-12 md:pt-20 overflow-hidden">
           <h1 className="text-2xl md:text-6xl font-semibold mt-12 md:mt-44  pb-20 md:pb-0">
             Mockups
           </h1>

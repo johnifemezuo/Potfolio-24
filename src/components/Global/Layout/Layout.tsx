@@ -8,7 +8,7 @@ export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div className="w-full">
       <motion.div
-        className="fixed top-0 left-0 right-0 h-2 bg-[#d1ef1a] z-50"
+        className="fixed top-0 left-0 right-0 h-2 bg-[#d1ef1a] z-50 "
         style={{ scaleX: scrollYProgress }}
       />
       <Navigation />

@@ -41,7 +41,7 @@ export const SingleWorkPageLayout = ({
   return (
     <div>
       {/* <CursorEffect /> */}
-      <div className="bg-white  md:pb-44">
+      <div className="bg-white pt-12 md:pt-0  md:pb-44">
         <div className="py-6 md:py-12" />
         <div className="max-w-[1300px] mx-auto px-4 md:px-0">
           <div className=" py-9 md:py-14 lg:py-28 ">
