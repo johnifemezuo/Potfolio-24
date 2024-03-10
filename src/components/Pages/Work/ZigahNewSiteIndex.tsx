@@ -17,8 +17,8 @@ export const ZigahNewSiteIndex = () => {
 
       "
       role="Front end Developer"
-      duration="From 2022 to 2024"
-      platform="Website & Web Application"
+      duration="1 Week"
+      platform="Website"
       year="2023"
       src="/images/zigah-new/zigah-new.png"
       liveSite="https://zigah.vercel.app/"
@@ -102,17 +102,16 @@ export const ZigahNewSiteIndex = () => {
         {/* =================================Design Process================================== */}
         <GridTwoColsContainer className=" border-t pt-12 md:pt-20">
           <div className="grid gap-5 md:gap-12 pb-4 md:pb-8 ">
-            <SectionTitle title="Tech Stacks" />
+            <SectionTitle title="Tech Stacks & Technology" />
           </div>
 
           <div className="space-y-5">
             <Para>Nextjs,</Para>
+            <Para>TailwindCss</Para>
+            <Para>GSAP</Para>
+
             <Para>Graph Api,</Para>
-            <Para>Graph Api,</Para>
-            <Para>TailwindCss,</Para>
-            <Para>
-              Framer motion (Website animation and dashboard transitions),
-            </Para>
+            <Para>GraphCMS,</Para>
           </div>
         </GridTwoColsContainer>
 
