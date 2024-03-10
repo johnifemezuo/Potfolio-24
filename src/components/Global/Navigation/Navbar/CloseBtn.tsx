@@ -4,7 +4,7 @@ export const CloseBtn = ({ onClick }: { onClick: () => void }) => {
   return (
     <button
       onClick={onClick}
-      className="flex--items space-x-3 group absolute top-0 right-0 m-3 md:m-6"
+      className="flex--items space-x-3 group absolute top-0 right-0 m-3 md:m-6 z-30"
     >
       <span className="transition duration-500  lg:text-xl text-stone-600 font-light group-hover:text-stone-400">
         Close

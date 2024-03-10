@@ -19,16 +19,11 @@ export function Navbar() {
           {openNav && (
             <motion.div
               layout
-              initial={openNav && { width: 600, origin: "right", height: 630 }}
+              initial={{origin: "right",}}
               exit={{ opacity: 0, origin: "right", width: 0, height: 0 }}
-              animate={{
-                opacity: 1,
-              }}
               className={`overflow-hidden bg-white z-50 md:rounded-[40px] p-6 lg:p-8 sm:w-[500px] lg:h-[650px] fixed md:absolute top-0 md:left-auto left-0 right-0 w-full lg:w-[600px]`}
             >
-              <div>
                 <CloseBtn onClick={() => setOpenNav(false)} />
-              </div>
 
               <nav className="mt-14">
                 <p className="uppercase text-stone-500 ">Navigation</p>
@@ -48,6 +43,7 @@ export function Navbar() {
                 className="flex items-end justify-between w-full  mt-12"
               >
                 <LinkOut title="ifemohn@gmail.com" link="/" />
+                
                 <div className="grid">
                   <LinkOut
                     title="Behance"

@@ -15,7 +15,7 @@ import Reveal from "@/components/Global/Animation/Reveal";
 export const AboutPage = () => {
   return (
     <PageContainer>
-      <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[80vh] md:h-[70vh] lg:h-[86vh] xl:h-[100vh] py-8 md:py-14 md:p-8 md:px-3 lg:12 xl:px-12">
+      <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[80vh] md:h-[100vh] lg:h-[100vh] xl:h-[100vh] py-8 md:py-14 md:p-8 md:px-3 lg:12 xl:px-12">
         <div className="flex space-x-4 items-center md:space-x-12 ml-6 m md:-mt-12 mb-4">
           <motion.div
             initial={{
@@ -52,7 +52,7 @@ export const AboutPage = () => {
           </motion.h1>
         </div>
 
-        <div className="md:flex space-x-4 md:space-x-44 space-y-4">
+        <div className="lg:flex space-x-4 lg:space-x-44 space-y-4">
           <motion.div
             initial={{
               scale: 0.5,
@@ -65,7 +65,7 @@ export const AboutPage = () => {
               opacity: 1,
             }}
             transition={{ delay: 0.7, duration: 1, bounce: 0.3 }}
-            className="mx-auto md:mx-0 bg-gray-600 w-[130px] rounded-full h-[130px] lg:w-[540px] md:w-[610px]  md:h-[310px] lg:h-[360px] overflow-hidden"
+            className="mx-auto md:mx-0 bg-gray-600 w-[130px] rounded-full h-[130px] lg:w-[540px] md:w-[310px]  md:h-[310px] lg:h-[300px] overflow-hidden"
           >
             <Image
               src="/images/me2.jpg"
@@ -126,17 +126,22 @@ export const AboutPage = () => {
                 opacity: 1,
               }}
               transition={{ delay: 1, duration: 1, staggerChildren: 0.6 }}
-              className="pt-0 md:pt-12"
+              className="pt-0 md:pt-6 lg:pt-12"
             >
-              <p className="text-zinc-500 tracking-tighter  text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-5xl leading-8 md:leading-10">
-                I have always loved creating and surprising others. This
-                experience helped me become a pro at designing and developing.
+              <div className="text-zinc-500 tracking-tighter md:px-0 pr-6 text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-5xl leading-8 md:leading-10">
+                <span>
+                  I have always loved creating and surprising others. This
+                  experience helped me become a pro at designing and developing.
+                </span>
                 <span className="text-white">
                   I consider design to be my true calling, Which I have been
                   doing for many years.
                 </span>
-                Creating web interface and softwares that user will love using.
-              </p>
+                <span>
+                  Creating web interface and softwares that user will love
+                  using.
+                </span>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -161,10 +166,12 @@ export const AboutPage = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="py-4 mb-4">
+          <div className="overflow-hidden py-4 mb-4">
             <p className="text-zinc-500 tracking-tighter text-2xl md:text-3xl lg:text-4xl py-0 md:py-12 xl:space-y-8 xl:text-5xl leading-8 md:leading-10">
-              Am equally a software Engineer with 5 years experience in
-              designing and building softwares.
+              <span>
+                Am equally a software Engineer with 5 years experience in
+                designing and building softwares.
+              </span>
               <span className="text-white">
                 {" "}
                 I love to solve problems and i help businesses

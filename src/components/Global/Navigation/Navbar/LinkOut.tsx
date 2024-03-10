@@ -6,7 +6,7 @@ export const LinkOut = ({ link, title }: { link: string; title?: string }) => {
     <Link href={link} className=" transition  flex--items group">
       <ArrowRight className="text-black mr-3 w-6" />
 
-      <span className="font-light text-zinc-900 md:text-2xl text-lg lg:text-xl group-hover:translate-x-3 transition-all duration-500">
+      <span className="font-light text-zinc-900 md:text-2xl text-base lg:text-xl group-hover:translate-x-3 transition-all duration-500">
         {title}
       </span>
     </Link>
