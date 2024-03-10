@@ -3,6 +3,7 @@ import {
   Para,
   ProjectImagePreview,
   RoundedButton,
+  ScrollReveal,
 } from "@/components";
 import { SingleWorkPageLayout } from "./SingleWorkPage/SingleWorkPageLayout";
 import { SectionTitle } from "./SingleWorkPage/components/SectionTitle";
@@ -56,6 +57,8 @@ export const MoonlightIndex = () => {
           </Para>
         </GridTwoColsContainer>
 
+
+        <ScrollReveal>
         <Image
           src="/images/moonlight/personas.png"
           alt="john ifemezuo rendlr image"
@@ -63,6 +66,7 @@ export const MoonlightIndex = () => {
           className=" w-full h-full object-fill"
           height={1000}
         />
+        </ScrollReveal>
 
         <GridTwoColsContainer className="border-t py-12 md:py-20 mt-20">
           <SectionTitle title="Wireframe & User Flow" />
@@ -76,13 +80,15 @@ export const MoonlightIndex = () => {
           </div>
         </GridTwoColsContainer>
 
-        <Image
-          src="/images/moonlight/moonlight-wireframe.png"
-          alt="john ifemezuo rendlr image"
-          width={1200}
-          className=" w-full h-full object-fill"
-          height={1000}
-        />
+        <ScrollReveal>
+          <Image
+            src="/images/moonlight/moonlight-wireframe.png"
+            alt="john ifemezuo rendlr image"
+            width={1200}
+            className=" w-full h-full object-fill"
+            height={1000}
+          />
+        </ScrollReveal>
 
         {/* =================================Goal==================================== */}
 
@@ -90,13 +96,15 @@ export const MoonlightIndex = () => {
           <SectionTitle title="Onboarding" />
         </GridTwoColsContainer>
 
-        <Image
-          src="/images/moonlight/moonlight-onboarding.png"
-          alt="john ifemezuo moonlight image"
-          width={1200}
-          className=" w-full h-full object-fill"
-          height={1000}
-        />
+        <ScrollReveal>
+          <Image
+            src="/images/moonlight/moonlight-onboarding.png"
+            alt="john ifemezuo moonlight image"
+            width={1200}
+            className=" w-full h-full object-fill"
+            height={1000}
+          />
+        </ScrollReveal>
 
         {/* =================================Design Process==================================== */}
 
@@ -106,13 +114,15 @@ export const MoonlightIndex = () => {
           </div>
         </GridTwoColsContainer>
 
-        <Image
-          src="/images/moonlight/moonlight-signup.png"
-          alt="john ifemezuo moonlight image"
-          width={1200}
-          className=" w-full h-full object-fill"
-          height={1000}
-        />
+        <ScrollReveal>
+          <Image
+            src="/images/moonlight/moonlight-signup.png"
+            alt="john ifemezuo moonlight image"
+            width={1200}
+            className=" w-full h-full object-fill"
+            height={1000}
+          />
+        </ScrollReveal>
 
         {/* =================================Users==================================== */}
 
@@ -122,61 +132,69 @@ export const MoonlightIndex = () => {
           </div>
         </GridTwoColsContainer>
 
-        <Image
-          src="/images/moonlight/moonlight-match.png"
-          alt="john ifemezuo moonlight image"
-          width={1200}
-          className=" w-full h-full object-fill"
-          height={1000}
-        />
+        <ScrollReveal>
+          <Image
+            src="/images/moonlight/moonlight-match.png"
+            alt="john ifemezuo moonlight image"
+            width={1200}
+            className=" w-full h-full object-fill"
+            height={1000}
+          />
+        </ScrollReveal>
 
         {/* =================================Video preview==================================== */}
+        <ScrollReveal>
+          <div className="mt-12 md:mt-44 space-y-12 md:space-y-44">
+            <div className="space-y-12 mt-20">
+              <SectionTitle title="Onboarding flow" />
 
-        <div className="mt-12 md:mt-44 space-y-12 md:space-y-44">
-          <div className="space-y-12 mt-20">
-            <SectionTitle title="Onboarding flow" />
+              <video className=" w-full" width="320" height="240" controls>
+                <source
+                  src="/videos/moonlight-onboarding.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
 
-            <video className=" w-full" width="320" height="240" controls>
-              <source src="/videos/moonlight-onboarding.mp4" type="video/mp4" />
-            </video>
+            <div className="space-y-12 mt-20">
+              <SectionTitle title="Match Flow" />
+              <video className=" w-full" width="320" height="240" controls>
+                <source src="/videos/moonlight-preview.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
-
-          <div className="space-y-12 mt-20">
-            <SectionTitle title="Match Flow" />
-            <video className=" w-full" width="320" height="240" controls>
-              <source src="/videos/moonlight-preview.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
+        </ScrollReveal>
 
         {/* =================================Mock screen==================================== */}
-
-        <div className="space-y-5 md:space-y-9 flex py-12 md:py-60 space-x-12 md:space-x-20">
-          <Image
-            src="/images/moonlight/mm1.png"
-            alt="john ifemezuo moonlight image"
-            width={1300}
-            className=" w-full h-full object-fill"
-            height={900}
-          />
-          <Image
-            src="/images/moonlight/mm2.png"
-            alt="john ifemezuo moonlight image"
-            width={1300}
-            className=" w-full h-full object-fill translate-y-60"
-            height={900}
-          />
-          <Image
-            src="/images/moonlight/mm3.png"
-            alt="john ifemezuo moonlight image"
-            width={1300}
-            className=" w-full h-full object-fill translate-y-96"
-            height={900}
-          />
-        </div>
+        <ScrollReveal>
+          <div className="space-y-5 md:space-y-9 flex py-12 md:py-60 space-x-12 md:space-x-20">
+            <Image
+              src="/images/moonlight/mm1.png"
+              alt="john ifemezuo moonlight image"
+              width={1300}
+              className=" w-full h-full object-fill"
+              height={900}
+            />
+            <Image
+              src="/images/moonlight/mm2.png"
+              alt="john ifemezuo moonlight image"
+              width={1300}
+              className=" w-full h-full object-fill translate-y-60"
+              height={900}
+            />
+            <Image
+              src="/images/moonlight/mm3.png"
+              alt="john ifemezuo moonlight image"
+              width={1300}
+              className=" w-full h-full object-fill translate-y-96"
+              height={900}
+            />
+          </div>
+        </ScrollReveal>
 
         {/* =================================Mocks==================================== */}
 
+        <ScrollReveal>
         <div className="space-y-5 md:space-y-9 flex py-12 md:pt-60 space-x-12 md:space-x-20">
           <Image
             src="/images/moonlight/usermock.png"
@@ -193,9 +211,10 @@ export const MoonlightIndex = () => {
             height={900}
           />
         </div>
+        </ScrollReveal>
 
         {/* ===================================================================== */}
-
+        <ScrollReveal>
         <div className="py-12 space-y-12">
           <SectionTitle title="All Screens" />
 
@@ -207,8 +226,10 @@ export const MoonlightIndex = () => {
             height={900}
           />
         </div>
+        </ScrollReveal>
 
         {/* =================================Final Design==================================== */}
+        <ScrollReveal>
         <div className=" mt-12 md:py-2 grid gap-5 justify-center align-middle md:gap-12 place-items-center">
           <h1 className="text-2xl md:text-5xl font-medium mt-12 md:mt-44  pb-20 md:pb-0 text-center">
             Marketing Website
@@ -216,7 +237,9 @@ export const MoonlightIndex = () => {
 
           <RoundedButton link="https://www.moonlight.com/" />
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal>
         <div className="pt-12">
           <Image
             src="/images/moonlight/moon2.jpg"
@@ -226,6 +249,7 @@ export const MoonlightIndex = () => {
             height={1200}
           />
         </div>
+        </ScrollReveal>
       </div>
     </SingleWorkPageLayout>
   );

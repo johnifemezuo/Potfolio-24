@@ -29,17 +29,17 @@ export const WorkProjectCard = ({
       onClick={() => push(link)}
       className="group cursor-pointer md:h-auto"
     >
-      <div className=" relative w-full h-[300px] md:h-[600px] transition-all overflow-hidden ">
+      <div className=" relative w-full h-[350px] xl:h-[350px] 2xl:h-[550px] transition-all overflow-hidden hover:rounded-2xl">
         <Image
           src={image}
           alt=""
           width={600}
           height={900}
-          className="object-cover w-full h-full rounded-2xl md:rounded-none group-hover:rounded-3xl duration-500 transition-all"
+          className="group-hover:scale-110 object-cover w-full h-full rounded-2xl md:rounded-none  duration-500 transition-all"
         />
       </div>
       <div className="py-3 border-t mt-5 lg:flex w-full justify-between items-center">
-        <h3 className="text-2xl md:space-y-2 md:text-5xl font-semibold text-white grid h-12 md:h-14 overflow-hidden md:min-w-[160px] md:pb-2">
+        <h3 className="text-2xl md:space-y-2 md:text-3xl font-semibold text-white grid h-12 md:h-14 overflow-hidden md:w-[280px] md:pt-2">
           <span
             className={`${
               onHover ? "translate-y-0 lg:-translate-y-[60px]" : ""
@@ -58,14 +58,14 @@ export const WorkProjectCard = ({
 
         <div className="lg:space-y-6 md:pt-2 w-[360px] h-[70px]  overflow-hidden ">
           <div
-            className={`space-y-2 space-x-2 w-full duration-500 transition-all text-sm lg:text-base lg:text-right text-zinc-300 font-light ${
+            className={`space-y-2 space-x-2 w-full duration-500 transition-all text-sm lg:text-base lg:text-right text-zinc-300  ${
               onHover ? " lg:-translate-y-[100px] translate-y-0" : " lg:mt-1"
             }`}
           >
             {tags?.map((tag, k) => (
               <button
                 key={k}
-                className="px-4 py-2 border rounded-full border-zinc-300 text-zinc-300 text-xs uppercase"
+                className="px-4 py-2 border rounded-full border-zinc-300 text-zinc-300 text-xs uppercase "
               >
                 {tag}
               </button>
@@ -75,7 +75,7 @@ export const WorkProjectCard = ({
           <p
             className={`${
               onHover ? "translate-y-0 lg:-translate-y-[60px]" : ""
-            } duration-500 hidden lg:block tracking-tight transition-all w-full text-base md:text-xl md:text-right text-zinc-300 
+            } duration-500 hidden lg:block tracking-tight transition-all w-full text-base md:text-base md:text-right text-zinc-300 
           `}
           >
             {description}

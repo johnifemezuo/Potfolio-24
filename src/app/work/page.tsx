@@ -8,6 +8,7 @@ function WorkPage() {
     <>
       <Head>
         <title>John Ifemezuo | Works</title>
+        <link rel="icon" href="/images/me-tab.png" />
       </Head>
 
       <Layout>

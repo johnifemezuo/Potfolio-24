@@ -34,7 +34,7 @@ export const HeroSection = () => {
     
       <div
         id="top"
-        className="relative rounded-xl border border-[#312F2F] h-[90vh] py-20 md:py-14 md:p-8 px-3 lg:12 xl:px-20
+        className="relative rounded-xl border border-[#312F2F] h-[96vh] py-20 md:py-14 md:p-8 px-3 lg:12 xl:px-20
       "
       >
         <div className="lg:-space-y-6 md:-space-y-6">

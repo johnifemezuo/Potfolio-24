@@ -8,6 +8,7 @@ function AboutMePage() {
     <>
       <head>
         <title>John Ifemezuo | About</title>
+        <link rel="icon" href="/images/me-tab.png" />
       </head>
 
       <Layout>

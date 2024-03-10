@@ -34,9 +34,9 @@ export const SingleWorkPageLayout = ({
 }) => {
   const { push } = useRouter();
 
-  const nonActiveProjects = projects.filter(
-    (project) => project.title !== title
-  );
+  const nonActiveProjects = projects
+    .filter((project) => project.title !== title)
+    .splice(0, 2);
 
   return (
     <div>
@@ -46,19 +46,17 @@ export const SingleWorkPageLayout = ({
         <div className="max-w-[1300px] mx-auto px-4 md:px-0">
           <div className=" py-9 md:py-14 lg:py-28 ">
             {/* <Reveal duration={0.6}> */}
-              <GridTwoColsContainer>
-                <div className="w-full">
-                  <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium">
-                    {title}
-                  </h1>
-                </div>
+            <GridTwoColsContainer>
+              <div className="w-full">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium">
+                  {title}
+                </h1>
+              </div>
 
-                <div className="w-full ">
-                  <p className="text-lg md:text-xl lg:text-2xl">
-                    {description}
-                  </p>
-                </div>
-              </GridTwoColsContainer>
+              <div className="w-full ">
+                <p className="text-lg md:text-xl lg:text-2xl">{description}</p>
+              </div>
+            </GridTwoColsContainer>
             {/* </Reveal> */}
 
             <motion.div

@@ -3,6 +3,7 @@ import {
   Para,
   ProjectImagePreview,
   RoundedButton,
+  ScrollReveal,
 } from "@/components";
 import { SingleWorkPageLayout } from "./SingleWorkPage/SingleWorkPageLayout";
 import { SectionTitle } from "./SingleWorkPage/components/SectionTitle";
@@ -88,13 +89,15 @@ export const ZigahIndex = () => {
           </div>
         </GridTwoColsContainer>
 
-        <Image
-          src="/images/zigah/zigah-landing.png"
-          alt="john ifemezuo Zigah image"
-          width={1500}
-          className=" w-full h-full object-fill "
-          height={1200}
-        />
+        <ScrollReveal>
+          <Image
+            src="/images/zigah/zigah-landing.png"
+            alt="john ifemezuo Zigah image"
+            width={1500}
+            className=" w-full h-full object-fill "
+            height={1200}
+          />
+        </ScrollReveal>
 
         {/* =================================Design Process================================== */}
 
@@ -105,6 +108,7 @@ export const ZigahIndex = () => {
 
           <div className="space-y-5">
             <Para>Nextjs,</Para>
+            <Para>TailwindCSS,</Para>
             <Para>Rest Api,</Para>
             <Para>Graph Api,</Para>
             <Para>Keycloak,</Para>
@@ -141,49 +145,37 @@ export const ZigahIndex = () => {
           </div>
         </GridTwoColsContainer>
 
-        <Image
-          src="/images/zigah/zigah-landing.png"
-          alt="john ifemezuo Zigah image"
-          width={1500}
-          className=" w-full h-full object-fill "
-          height={1200}
-        />
-
-        {/* =================================Design Process================================== */}
-
-        <GridTwoColsContainer className=" border-t pt-12 md:pt-20">
-          <div className="grid gap-5 md:gap-12">
-            <SectionTitle title="Tech Stacks" />
-          </div>
-
-          <div className="space-y-5">
-            <Para>Nextjs,</Para>
-            <Para>Rest Api,</Para>
-            <Para>Graph Api,</Para>
-            <Para>Keycloak,</Para>
-            <Para>
-              Framer motion (Website animation and dashboard transitions),
-            </Para>
-          </div>
-        </GridTwoColsContainer>
-
-        <div className=" pt-12 md:pt-20 grid gap-5 justify-center align-middle  md:gap-12 place-items-center">
-          <h1 className="text-2xl md:text-5xl font-medium mt-12 md:mt-44  pb-20 md:pb-0 text-center">
-            Visit Zigah App
-          </h1>
-
-          <RoundedButton link="https://app.zigah.co/auth/login" />
-        </div>
-
-        <div className="mt-12 pb-20">
+        <ScrollReveal>
           <Image
-            src="/images/zigah/zigah-userdashboard.png"
+            src="/images/zigah/zigah-landing.png"
             alt="john ifemezuo Zigah image"
             width={1500}
-            className=" w-full h-full object-fill"
+            className=" w-full h-full object-fill "
             height={1200}
           />
-        </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className=" pt-12 md:pt-20 grid gap-5 justify-center align-middle  md:gap-12 place-items-center">
+            <h1 className="text-2xl md:text-5xl font-medium mt-12 md:mt-44  pb-20 md:pb-0 text-center">
+              Visit Zigah App
+            </h1>
+
+            <RoundedButton link="https://app.zigah.co/auth/login" />
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="mt-12 pb-20">
+            <Image
+              src="/images/zigah/zigah-userdashboard.png"
+              alt="john ifemezuo Zigah image"
+              width={1500}
+              className=" w-full h-full object-fill"
+              height={1200}
+            />
+          </div>
+        </ScrollReveal>
       </div>
     </SingleWorkPageLayout>
   );

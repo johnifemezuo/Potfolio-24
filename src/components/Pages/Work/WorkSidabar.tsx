@@ -19,7 +19,7 @@ export const WorkSidebar = ({
   );
 
   return (
-    <div className="w-[500px] sticky top-5 h-screen  hidden md:block space-y-20 ">
+    <div className="w-[400px] sticky top-5 h-screen  hidden xl:block space-y-20  ">
       <div>
         <h2
           className="text-white text-lg md:text-3xl font-medium mb-6

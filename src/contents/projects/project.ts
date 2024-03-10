@@ -9,7 +9,7 @@ export const projects: IProject[] = [
     image: "/images/rendlr/rendlr-cover.png",
     image2: "/images/rendlr/rendlr-cover2.png",
     category: "design",
-    tags: ["Product Design", "Mobile app", "2023"],
+    tags: ["Product Design", "2023"],
   },
 
   {
@@ -20,7 +20,7 @@ export const projects: IProject[] = [
     image: "/images/moonlight/moon.jpg",
     image2: "/images/moonlight/moon.jpg",
     category: "design",
-    tags: ["Product Design", "Mobile App", "2023"],
+    tags: ["Mobile App Design", "2023"],
   },
   {
     title: "Zigah",
@@ -31,5 +31,25 @@ export const projects: IProject[] = [
     image2: "/images/zigah/zigah-mock.jpg",
     category: "development",
     tags: ["Front end Development", "2023"],
+  },
+  {
+    title: "Micky",
+    description:
+      "An online store with great quality product for sports enthusiasts.",
+    link: "https://www.behance.net/gallery/142199719/Sports-Outfit-E-commerce",
+    image: "/images/micky/Micky.png",
+    image2: "/images/micky/Micky.png",
+    category: "design",
+    tags: ["UI/UX Design", "2022"],
+  },
+  {
+    title: "Zigah Redesign",
+    description:
+      "New Trendy outlook for Zigah website.",
+    link: "/work/zigah-redesign",
+    image: "/images/zigah-new/zigah-new.png",
+    image2: "/images/zigah-new/zigah-new.png",
+    category: "development",
+    tags: ["Website Development", "2022"],
   },
 ];

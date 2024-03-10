@@ -114,7 +114,7 @@ export const SelectedWorks = () => {
                 variants={easeCardVariant}
                 initial="hidden"
                 animate={mainControls}
-                className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12 bg-transparent"
+                className=" h-auto w-full grid xl:grid-cols-2 gap-5 md:gap-9 lg:gap-12 bg-transparent"
               >
                 {projects.map((project, ind) => (
                   <WorkProjectCard
@@ -140,22 +140,6 @@ export const SelectedWorks = () => {
                 </Link>
               </div>
             </PageContainer>
-
-            {/* <Link href="/work">
-              <div className="relative py-12 lg:py-0 bg-white  grid lg:h-screen place-content-center ">
-                <div className="grid justify-items-center space-y-4 lg:space-y-8">
-                  <h1 className="text-xl md:text-3xl font-medium lg:text-[3rem] text-zinc-900">
-                    Wait there is more?
-                  </h1>
-                 
-
-                  <button className="flex--items space-x-3 text-zinc-600 hover:text-zinc-700">
-                    <p className="sm:text-xl ">View showcase</p>
-                    <ArrowDownIcon className="-rotate-45 h-4 w-4 lg:w-7 lg:h-7" />
-                  </button>
-                </div>
-              </div>
-            </Link> */}
           </div>
         </div>
       </div>

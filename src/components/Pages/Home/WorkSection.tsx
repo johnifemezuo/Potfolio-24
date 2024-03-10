@@ -1,8 +1,6 @@
 "use client";
 
-import { ArrowDownIcon, ArrowRight, PageContainer } from "@/components";
-import Image from "next/image";
-import Link from "next/link";
+import { ArrowRight, PageContainer } from "@/components";
 import { WorkType } from "./WorkType";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -78,15 +76,15 @@ export const WorkSection = () => {
           }}
           className="grid no-scrollbar w-full mt-14 xl:mt-44 gap-5 md:gap-0 md:space-y-7 px-3 xl:px-12"
         >
-          <div className="md:flex md:justify-start ">
-            <ArrowRight className="w-[35px] md:w-[68px] md:h-[54px] lg:w-[150px] md:-ml-10 text-white rotate-90 mt-5" />
+          <div className="md:flex md:justify-start  space-x-5">
+            <ArrowRight className=" w-[35px] md:w-[40px] md:h-[40px] lg:h-[54px] lg:w-[150px]  lg:-ml-10 text-white rotate-90 mt-5" />
             <h1 className="md:w-[200px] text-white lg:text-5xl md:text-3xl text-3xl xl:w-[300px]">
               How Can I Assist You
             </h1>
           </div>
 
           {/* card 1 */}
-          <div className="grid md:grid-cols-2 gap-5 md:gap-9">
+          <div className="grid xl:grid-cols-2 gap-5 lg:gap-9">
             <WorkType
               title="Design"
               description="DESIGN SERVICES ARE FOCUSED ON TRANSFORMING THE ESSENCE OF YOUR BRAND
