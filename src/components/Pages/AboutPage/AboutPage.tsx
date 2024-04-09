@@ -185,7 +185,7 @@ export const AboutPage = () => {
         </ScrollReveal>
 
         <a
-          href="/resume/john-cv.pdf"
+          href="/resume/John ifemezuo (front end developer & UIUX designer).pdf"
           download
           className="border mt-12 hover:bg-zinc-800 transition-all text-zinc-400 border-zinc-700 rounded-xl p-4 md:w-auto w-full sm:inline-block space-y-2 md:p-4  
         "
