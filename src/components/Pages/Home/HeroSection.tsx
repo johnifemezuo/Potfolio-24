@@ -7,12 +7,8 @@ import {
   PageContainer,
   RoundedArt,
 } from "@/components";
-import Image from "next/image";
-import { gsap } from "gsap";
-import { useEffect, useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export const HeroSection = () => {
   const introTextVariants = {

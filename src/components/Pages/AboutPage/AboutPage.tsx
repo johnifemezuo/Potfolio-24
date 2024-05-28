@@ -65,7 +65,7 @@ export const AboutPage = () => {
               opacity: 1,
             }}
             transition={{ delay: 0.7, duration: 1, bounce: 0.3 }}
-            className="mx-auto md:mx-0 bg-gray-600 w-[130px] rounded-full h-[130px] lg:w-[540px] md:w-[310px]  md:h-[310px] lg:h-[300px] overflow-hidden"
+            className="mx-auto md:mx-0 bg-gray-600 w-[130px] rounded-full h-[130px] lg:w-[540px] md:w-[310px]  md:h-[310px] lg:h-[360px] overflow-hidden"
           >
             <Image
               src="/images/me2.jpg"
@@ -187,7 +187,7 @@ export const AboutPage = () => {
         <a
           href="/resume/John ifemezuo (front end developer & UIUX designer).pdf"
           download
-          className="border mt-12 hover:bg-zinc-800 transition-all text-zinc-400 border-zinc-700 rounded-xl p-4 md:w-auto w-full sm:inline-block space-y-2 md:p-4  
+          className="border mt-12 hover:bg-zinc-800 transition-all text-zinc-400 border-zinc-700 block justify-center w-[190px] mx-auto rounded-xl p-4 text-center  space-y-2 md:p-4  
         "
         >
           Download CV

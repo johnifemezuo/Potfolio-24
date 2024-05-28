@@ -51,7 +51,7 @@ export const ContactForm = () => {
         (error) => {
           setLoading(false);
 
-          console.log(error.text);
+          console.log(error);
           toast.error("Sorry, something is wrong", {
             duration: 4000,
             position: "bottom-center",

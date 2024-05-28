@@ -142,14 +142,14 @@ export const ZigahNewSiteIndex = () => {
         </ScrollReveal>
 
         {/* =================================Final Design==================================== */}
-
+{/* 
         <div className=" pt-12 md:pt-20 grid gap-5 justify-center align-middle  md:gap-12 place-items-center">
           <h1 className="text-2xl md:text-5xl font-medium mt-12 md:mt-44  pb-20 md:pb-0 text-center">
             Visit Zigah App
           </h1>
 
           <RoundedButton link="https://app.zigah.co/auth/login" />
-        </div>
+        </div> */}
 
         <div className="mt-12 pb-20">
           <Image

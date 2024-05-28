@@ -57,7 +57,7 @@ export const WorkSection = () => {
             <span className={btnStyle}>UI/UX design</span>
             <span className={btnStyle}>Web Developer</span>
             <span className={btnStyle}>Front end Engineer</span>
-            <span className={btnStyle}>Mobile Developer</span>
+            {/* <span className={btnStyle}>Mobile Developer</span> */}
           </div>
         </motion.div>
       </PageContainer>
