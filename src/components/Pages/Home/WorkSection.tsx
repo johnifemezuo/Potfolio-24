@@ -54,10 +54,10 @@ export const WorkSection = () => {
           </h1>
 
           <div className="xl:grid flex flex-wrap grid-cols-3 gap-3 lg:gap-5">
-            <span className={btnStyle}>UI/UX design</span>
-            <span className={btnStyle}>Web Developer</span>
-            <span className={btnStyle}>Front end Engineer</span>
-            {/* <span className={btnStyle}>Mobile Developer</span> */}
+            <span className={btnStyle}>Mobile app design</span>
+            <span className={btnStyle}>Website Design</span>
+            <span className={btnStyle}>Front end development</span>
+            <span className={btnStyle}>No-code Development</span>
           </div>
         </motion.div>
       </PageContainer>

@@ -25,9 +25,9 @@ export const WorkType = ({
 }: IWorkStyle) => {
   return (
     <div
-      className={`space-x-6 relative  w-full p-4 md:p-6 lg:p-14 rounded-3xl flex  cursor-pointer ${bgStyle}`}
+      className={`space-x-6 relative  w-full p-4 md:p-6 lg:p-12 rounded-3xl flex  cursor-pointer ${bgStyle}`}
     >
-      <div className="md:w-[400px] lg:min-w-[230px]   grid justify-center text-center  ">
+      <div className="md:w-[400px] lg:min-w-[220px]   grid justify-center text-center  ">
         <Image
           src={image}
           className="mx-auto rounded-full lg:w-[200px] w-[100px] h-[100px] lg:h-[200px] object-cover"

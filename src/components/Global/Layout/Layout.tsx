@@ -1,6 +1,5 @@
 import { Footer, Navigation } from "../../index";
 import { motion, useScroll } from "framer-motion";
-import { CursorEffect } from "../Animation";
 
 export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
   const { scrollYProgress } = useScroll();
@@ -15,7 +14,6 @@ export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
       {children}
       <Footer />
 
-      <CursorEffect />
     </div>
   );
 }

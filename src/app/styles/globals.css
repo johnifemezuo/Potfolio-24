@@ -50,15 +50,6 @@ body {
   animation-iteration-count: infinite;
 }
 
-.cursor {
-  background-color: red;
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
 @keyframes spin {
   from {
@@ -68,6 +59,43 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+
+.scroll-down-arrow {
+  animation: scrollDown 1.5s infinite;
+  
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.scroll-up-arrow {
+  animation: upanddown 1.5s infinite;
+  
+}
+
+@keyframes upanddown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 @tailwind base;
 @tailwind components;

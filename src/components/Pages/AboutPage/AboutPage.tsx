@@ -7,10 +7,9 @@ import {
   RoundedArt,
   ScrollReveal,
 } from "@/components";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { WorkTimeLine } from "./WorkTimeLine";
-import { motion } from "framer-motion";
-import Reveal from "@/components/Global/Animation/Reveal";
 
 export const AboutPage = () => {
   return (
@@ -128,15 +127,15 @@ export const AboutPage = () => {
               transition={{ delay: 1, duration: 1, staggerChildren: 0.6 }}
               className="pt-0 md:pt-6 lg:pt-12"
             >
-              <div className="text-zinc-500 tracking-tighter md:px-0 pr-6 text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-5xl leading-8 md:leading-10">
+              <div className="text-zinc-500 tracking-tighter md:px-0 pr-6 text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-4xl 2xl:text-5xl leading-10 md:leading-10">
                 <span>
                   I have always loved creating and surprising others. This
                   experience helped me become a pro at designing and developing.
-                </span>
+                </span>{" "}
                 <span className="text-white">
                   I consider design to be my true calling, Which I have been
                   doing for many years.
-                </span>
+                </span>{" "}
                 <span>
                   Creating web interface and softwares that user will love
                   using.
@@ -242,7 +241,7 @@ export const AboutPage = () => {
         <ScrollReveal>
           <div className="py-8 md:py-20 md:mb-28 mb-12">
             <p className="text-zinc-200 tracking-tighter  min-w-[200px]  text-3xl md:text-3xl lg:text-4xl pb-6 xl:space-y-8 xl:text-7xl leading-10">
-              Brands I have worked with & <br /> Experiences.
+              Brands and startups I have worked with & <br /> Experiences.
             </p>
 
             <div>

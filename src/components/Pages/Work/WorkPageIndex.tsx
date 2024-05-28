@@ -98,11 +98,11 @@ export const WorkPageIndex = () => {
             active={selectedCategory === "design"}
             onClick={() => filterByCategory("design")}
           />
-          <BigButton
+          {/* <BigButton
             title="Framer"
             active={selectedCategory === "framer"}
             onClick={() => filterByCategory("framer")}
-          />
+          /> */}
           <BigButton
             title="Development"
             active={selectedCategory === "development"}

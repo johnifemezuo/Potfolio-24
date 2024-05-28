@@ -62,7 +62,7 @@ export const WorkSidebar = ({
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <h2
           className="text-white text-lg md:text-3xl font-medium mb-6
           "
@@ -83,7 +83,7 @@ export const WorkSidebar = ({
 
           <p className="text-zinc-400 md:text-lg ">Coming Soon...</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

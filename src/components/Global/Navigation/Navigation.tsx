@@ -29,7 +29,7 @@ export const Navigation = () => {
         <div className=" flex items-center justify-between text-white">
           <Logo />
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <SiteTime />
           </div>
 
@@ -49,6 +49,6 @@ export const Navigation = () => {
           </div>
         </div>
       </PageContainer>
-    </motion.div>
+    </motion.div> 
   );
 };

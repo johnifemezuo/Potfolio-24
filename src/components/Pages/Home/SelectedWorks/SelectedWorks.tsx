@@ -73,7 +73,7 @@ export const SelectedWorks = () => {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="font-semibold md:max-w-xl text-3xl lg:text-6xl xl:text-8xl  text-stone-100"
+                className="font-semibold md:max-w-sm xl:max-w-xl text-3xl lg:text-6xl xl:text-8xl  text-stone-100"
               >
                 Selected Works
               </motion.h1>
@@ -83,10 +83,9 @@ export const SelectedWorks = () => {
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.7, delay: 0.6 }}
-                className="font-extralight text-sm lg:w-[400px] 2xl:w-[500px] sm:text-lg  md:text-lg lg:text-2xl leading-snug text-zinc-100 lg:font-medium"
+                className="font-light text-sm lg:w-[400px] 2xl:w-[500px] sm:text-lg  md:text-lg lg:text-2xl leading-snug text-zinc-100 lg:font-medium"
               >
-                I have worked on lots of projects, I both Design and Front end
-                development and I have got the receipts to prove it in my
+                I have worked on lots of projects, I both Design and develop products and I have got the receipts to prove it in my
                 portfolio of case studies.
               </motion.p>
             </div>
