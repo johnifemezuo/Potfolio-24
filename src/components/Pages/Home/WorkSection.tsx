@@ -49,7 +49,7 @@ export const WorkSection = () => {
           ref={ref}
           className="space-y-6 xl:space-y-0 justify-between px-4 md:py-8 md:px-6 2xl:px-20 py-4 xl:px-12 xl:py-12 2xl:py-20 border border-border-color rounded-xl xl:flex items-center"
         >
-          <h1 className="text-2xl  md:text-5xl 2xl:text-[5rem] xl:text-[3rem] font-light text-white">
+          <h1 className="text-2xl  md:text-5xl 2xl:text-6xl xl:text-4xl font-light text-white">
             What i do best
           </h1>
 

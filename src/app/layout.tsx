@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./styles/globals.css";
+import "./styles/infinitScroll.css";
 
 const poppins = Manrope({
   subsets: ["latin"],

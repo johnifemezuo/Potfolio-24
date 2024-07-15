@@ -184,7 +184,7 @@ export const AboutPage = () => {
         </ScrollReveal>
 
         <a
-          href="/resume/John ifemezuo (front end developer & UIUX designer).pdf"
+          href="/resume/UI UX Designer Resume - John Ifemezuo.pdf"
           download
           className="border mt-12 hover:bg-zinc-800 transition-all text-zinc-400 border-zinc-700 block justify-center w-[190px] mx-auto rounded-xl p-4 text-center  space-y-2 md:p-4  
         "
@@ -250,18 +250,22 @@ export const AboutPage = () => {
                 role="UI/UX Designer & Front end Developer"
                 year="2019 - 2024"
                 image="/images/rendlr/Thumbnail.png"
+                link="/"
               />
               <WorkTimeLine
                 company="Ventlio"
                 role="UI/UX Designer"
                 year="2021 - 2024"
                 image="/images/zigah/Homepage.png"
+                link="/"
+
               />
               <WorkTimeLine
                 company="Zigah.co"
                 role="Front end Engineer"
                 year="2022 - 2024"
                 image="/images/zigah/zigah-mock.jpg"
+                link="/"
               />
             </div>
           </div>

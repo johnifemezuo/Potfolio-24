@@ -19,7 +19,7 @@ export const WorkSidebar = ({
   );
 
   return (
-    <div className="w-[400px] sticky top-5 h-screen  hidden xl:block space-y-20  ">
+    <div className="w-[400px] sticky top-44 h-screen  hidden xl:block space-y-20  ">
       <div>
         <h2
           className="text-white text-lg md:text-3xl font-medium mb-6
@@ -84,6 +84,8 @@ export const WorkSidebar = ({
           <p className="text-zinc-400 md:text-lg ">Coming Soon...</p>
         </div>
       </div> */}
+
+
     </div>
   );
 };

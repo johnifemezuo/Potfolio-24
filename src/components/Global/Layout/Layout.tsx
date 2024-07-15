@@ -11,6 +11,7 @@ export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
         style={{ scaleX: scrollYProgress }}
       />
       <Navigation />
+      <div className="h-24"></div>
       {children}
       <Footer />
 

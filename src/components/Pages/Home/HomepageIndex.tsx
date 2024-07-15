@@ -5,6 +5,7 @@ import {
   Layout,
   PageContainer,
   Playground,
+  Reviews,
   SelectedWorks,
   WorkSection,
 } from "@/components";
@@ -18,7 +19,7 @@ export const HomepageIndex = () => {
       <WorkSection />
       <SelectedWorks />
       {/* <Reviews /> */}
-      {/* <Playground /> */}
+      <Playground />
       <PageContainer>
         <ExceptTwo />
       </PageContainer>

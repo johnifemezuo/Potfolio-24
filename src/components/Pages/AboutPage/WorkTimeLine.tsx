@@ -1,18 +1,22 @@
 import { ArrowLeft, ArrowRight } from "@/components";
 import Image from "next/image";
+import Link from "next/link";
 
 export const WorkTimeLine = ({
   company,
   role,
   year,
   image,
+  link
 }: {
   company: string;
   role: string;
   year: string;
   image: string;
+  link: string;
 }) => {
   return (
+    <Link href={link} target="_blank">
     <div className="relative group">
       <div className=" duration-500  cursor-pointer  hover:text-black border-y py-4 md:py-5 border-white/20 text-light tracking-tighter flex items-center justify-between text-xl md:text-2xl text-white hover:bg-white transition-all ">
         <ArrowRight className="hidden md:block group-hover:translate-x-12 transition-all duration-500  items-center  rotate-0 w-5 h-5  md:w-9 md:h-9 " />
@@ -38,5 +42,6 @@ export const WorkTimeLine = ({
         />
       </div>
     </div>
+    </Link>
   );
 };

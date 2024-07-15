@@ -103,9 +103,8 @@ export const HeroSection = () => {
                   <span>Desi</span>
                   <span className="text-stone-500">gner</span>
                 </h3>
-                <p className=" md:text-xl 2xl:text-2xl text-white font-light">
-                  I`am a independent product designer specializing in design
-                  visually pleasing and high converting websites and apps.
+                <p className=" md:text-xl 2xl:text-xl text-white font-light">
+                I am an independent product designer specializing in creating visually appealing and high-converting websites and apps.
                 </p>
               </div>
             </div>
@@ -119,8 +118,9 @@ export const HeroSection = () => {
                   <span>Deve</span>
                   <span className="text-stone-500">Loper</span>
                 </h3>
-                <p className="  md:text-xl 2xl:text-2xl text-white font-light">
-                  A Front end Developer with 5 years in software development.
+                <p className="  md:text-xl 2xl:text-xl text-white font-light">
+               
+                Front-End Developer with over 4 years of experience in designing and developing user interfaces for companies.
                 </p>
               </div>
             </div>

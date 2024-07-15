@@ -1,6 +1,6 @@
 "use client";
 
-import { BigButton, PageContainer, ScrollReveal } from "@/components";
+import { BigButton, PageContainer, Playground, ScrollReveal } from "@/components";
 import { WorkSidebar } from "./WorkSidabar";
 import { WorkProjectCard } from "./WorkProjectCard";
 import { IProject, projects } from "@/contents";
@@ -31,7 +31,8 @@ export const WorkPageIndex = () => {
 
   return (
     <PageContainer>
-      <div className="relative mb-12 md:mb-20 rounded-xl border border-[#312F2F] h-[53vh] md:h-[68vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12">
+      <div className="relative mb-12 md:mb-8 rounded-xl border border-[#312F2F] h-[53vh] md:h-[68vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12">
+
         <motion.div
           initial={{
             opacity: 0,
@@ -73,6 +74,8 @@ export const WorkPageIndex = () => {
           </div>
         </Reveal>
 
+      </div>
+
         <motion.div
           initial={{
             opacity: 0,
@@ -86,7 +89,7 @@ export const WorkPageIndex = () => {
             duration: 1,
             delay: 0.8,
           }}
-          className="flex absolute bottom-0 md:bottom-6 left-0 px-4 py-4 flex-wrap md:flex-nowrap gap-3  md:left-5"
+          className="flex sticky mb-6 top-20 bg-[var(--background-bg)] z-40 py-4 flex-wrap md:flex-nowrap gap-3  "
         >
           <BigButton
             title="All Work"
@@ -109,7 +112,6 @@ export const WorkPageIndex = () => {
             onClick={() => filterByCategory("development")}
           />
         </motion.div>
-      </div>
 
       <ScrollReveal>
         <div className="flex mb-32">
@@ -141,6 +143,9 @@ export const WorkPageIndex = () => {
           )}
         </div>
       </ScrollReveal>
+
+<Playground />
+
     </PageContainer>
   );
 };
