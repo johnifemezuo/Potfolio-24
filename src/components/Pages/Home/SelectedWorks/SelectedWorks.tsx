@@ -5,6 +5,7 @@ import {
   ArrowRight,
   PageContainer,
   ProjectCard,
+  ScrollReveal,
   WorkProjectCard,
 } from "@/components";
 import { projects } from "@/contents";
@@ -13,12 +14,15 @@ import {
   motion,
   useInView,
   useAnimation,
-  useScroll,
-  useTransform,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useQuery } from "@apollo/client";
+import { PROJECT_QUERY } from "../../../../../base/query/project";
 
-export const SelectedWorks = () => {
+
+export const SelectedWorks = ({selectedWork}:any) => {
+
+
   const ref = useRef(null);
   const refTwo = useRef(null);
 
@@ -51,18 +55,14 @@ export const SelectedWorks = () => {
     }
   }, [isInView]);
 
-  useEffect(() => {
-    if (cardInView) {
-      mainControls.start("showCards");
-    }
-  }, [cardInView]);
+
 
   return (
-    <div className="bg-[#110D0D] w-full pt-12 md:pt-20 xl:pt-44">
+    <div className="bg-[#110D0D] w-full pt-12 md:py-20 xl:py-32">
       <div className="pb-6 md:pb-20">
         <PageContainer>
           <div
-            ref={ref}
+          ref={ref}
             className="lg:space-y-20 space-y-6 px-4 py-8 xl:px-20 lg:py-20 border border-border-color rounded-xl"
           >
             <ArrowRight className="text-white items-center  rotate-90 w-8 h-12 xl:w-20 xl:h-20 md:w-14 md:h-14" />
@@ -93,20 +93,9 @@ export const SelectedWorks = () => {
         </PageContainer>
       </div>
 
-      <div className="w-full  ">
+      <ScrollReveal className="w-full  ">
         <div className="">
           <div className="">
-            {/* {projects?.map((project, i) => (
-              <ProjectCard
-                key={i}
-                title={project.title}
-                img={project.image}
-                desc={project.description}
-                link={project.link}
-                tags={project.tags}
-              />
-            ))} */}
-
             <PageContainer>
               <motion.div
                 ref={refTwo}
@@ -115,14 +104,14 @@ export const SelectedWorks = () => {
                 animate={mainControls}
                 className=" h-auto w-full grid xl:grid-cols-2 gap-5 md:gap-9 lg:gap-12 bg-transparent"
               >
-                {projects.map((project, ind) => (
+                {selectedWork?.map(({description,slug, projectTitle, introImage}: any, ind: any) => (
                   <WorkProjectCard
                     key={ind}
-                    link={project.link}
-                    title={project.title}
-                    description={project.description}
-                    image={project.image2}
-                    tags={project.tags}
+                    link={slug}
+                    title={projectTitle}
+                    description={description}
+                    image={introImage?.url}
+                    tags={["design"]}
                   />
                 ))}
               </motion.div>
@@ -141,7 +130,7 @@ export const SelectedWorks = () => {
             </PageContainer>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </div>
   );
 };

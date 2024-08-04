@@ -10,6 +10,7 @@ import { SingleWorkPageLayout } from "./SingleWorkPage/SingleWorkPageLayout";
 import { SectionTitle } from "./SingleWorkPage/components/SectionTitle";
 import Image from "next/image";
 
+
 export const RendlrIndex = () => {
   return (
     <SingleWorkPageLayout

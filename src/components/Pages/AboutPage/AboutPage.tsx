@@ -42,10 +42,10 @@ export const AboutPage = () => {
             transition={{ delay: 0.5, duration: 0.8, bounce: 0.3 }}
             className="flex space-x-3 "
           >
-            <span className="text-white text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
+            <span className="text-white text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[9rem] md:text-[6rem]">
               I`m
             </span>
-            <span className="text-stone-500  text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
+            <span className="text-stone-500  text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[9rem] md:text-[6rem]">
               John
             </span>
           </motion.h1>
@@ -94,8 +94,8 @@ export const AboutPage = () => {
                 </span>
 
                 <div className="space-y-3">
-                  <h3 className="text-2xl text-white md:text-3xl xl:text-5xl">
-                    <span>Desi</span>
+                  <h3 className="text-2xl text-white md:text-3xl xl:text-4xl">
+                    <span>Product Desi</span>
                     <span className="text-stone-500">gner</span>
                   </h3>
                 </div>
@@ -107,7 +107,7 @@ export const AboutPage = () => {
                 </span>
 
                 <div className="space-y-3">
-                  <h3 className="text-2xl text-white md:text-3xl xl:text-5xl">
+                  <h3 className="text-2xl text-white md:text-3xl xl:text-4xl">
                     <span>Deve</span>
                     <span className="text-stone-500">loper</span>
                   </h3>

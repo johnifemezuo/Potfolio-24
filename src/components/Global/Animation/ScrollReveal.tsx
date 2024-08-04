@@ -3,7 +3,7 @@
 import { useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-export const ScrollReveal = ({ children }: { children: React.ReactNode }) => {
+export const ScrollReveal = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   const easeInVariant = {
     hidden: { y: 50, opacity: 0 },
     visible: { y: 0, opacity: 1 },
@@ -27,6 +27,7 @@ export const ScrollReveal = ({ children }: { children: React.ReactNode }) => {
       variants={easeInVariant}
       initial="hidden"
       animate={mainControls}
+      className={className}
       transition={{ duration: 0.7, delay: 0.3 }}
     >
       {children}
