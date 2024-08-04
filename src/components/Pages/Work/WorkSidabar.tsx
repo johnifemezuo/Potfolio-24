@@ -11,11 +11,11 @@ export const WorkSidebar = ({
   projects,
   handleNameSelect,
   selectedName,
-}: IWorkSidebarProps) => {
-  const designs = projects.filter((project) => project.category === "design");
-  const webflows = projects.filter((project) => project.category === "framer");
-  const developments = projects.filter(
-    (project) => project.category === "development"
+}: any) => {
+  const designs = projects?.filter((project:any) => project.projectType === "design");
+  // const webflows = projects?.filter((project:any) => project.projectType === "framer");
+  const developments = projects?.filter(
+    (project:any) => project.projectType === "development"
   );
 
   return (
@@ -28,12 +28,12 @@ export const WorkSidebar = ({
           Designs
         </h2>
         <div className="space-y-4">
-          {designs?.map((design, ind) => (
+          {designs?.map((design: any, ind:any) => (
             <div key={ind}>
               <SmallBorderButton
-                active={design.title === selectedName}
-                onClick={() => handleNameSelect(design.title)}
-                title={design.title}
+                active={design.projectTitle === selectedName}
+                onClick={() => handleNameSelect(design.projectTitle)}
+                title={design.ProjectTitle}
               />
               <br />
             </div>
@@ -49,12 +49,12 @@ export const WorkSidebar = ({
           Front end
         </h2>
         <div className="space-y-4">
-          {developments?.map((dev, ind) => (
+          {developments?.map((dev:any, ind:any) => (
             <div key={ind}>
               <SmallBorderButton
-                active={dev.title === selectedName}
-                onClick={() => handleNameSelect(dev.title)}
-                title={dev.title}
+                active={dev.projectTitle === selectedName}
+                onClick={() => handleNameSelect(dev.projectTitle)}
+                title={dev.ProjectTitle}
               />
               <br />
             </div>

@@ -17,10 +17,13 @@ export const SingleWorkPageLayout = ({
   description,
   role,
   duration,
+  industry,
   year,
   src,
   platform,
   liveSite,
+  otherProjects,
+  slug
 }: {
   children: React.ReactNode;
   title: string;
@@ -28,23 +31,30 @@ export const SingleWorkPageLayout = ({
   role: string;
   duration: string;
   year: string;
+  industry: string;
   src: string;
   platform: string;
   liveSite?: string;
+  otherProjects?: any
+  slug?: string
 }) => {
   const { push } = useRouter();
 
-  const nonActiveProjects = projects
-    .filter((project) => project.title !== title)
-    .splice(0, 2);
+  // const projects = otherProjects?.projects.filter((project: any) => (
+  //   console.log(project)
+  // ));
+  
+  
+  // const nonActiveProjects = projects?.splice(0, 2);
 
+  
   return (
     <div>
       {/* <CursorEffect /> */}
       <div className="bg-white pt-12 md:pt-0  md:pb-44">
         <div className="py-6 md:py-12" />
-        <div className="max-w-[1300px] mx-auto px-4 md:px-0">
-          <div className=" py-9 md:py-14 lg:py-28 ">
+        <div className="max-w-[1050px] mx-auto px-4 lg:px-0">
+          <div className=" py-9 md:py-14 lg:py-16 ">
             {/* <Reveal duration={0.6}> */}
             <GridTwoColsContainer>
               <div className="w-full">
@@ -72,7 +82,7 @@ export const SingleWorkPageLayout = ({
                 duration: 0.6,
                 delay: 0.6,
               }}
-              className="mt-9 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-12 md:"
+              className="mt-9 md:mt-28 grid grid-cols-2 lg:grid-cols-5 gap-5 md:gap-12 md:"
             >
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
                 <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
@@ -80,6 +90,14 @@ export const SingleWorkPageLayout = ({
                 </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
                   {role}
+                </p>
+              </div>
+              <div className="space-y-2 md:space-y-5 divide-y inline-block">
+                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                  INDUSTRY
+                </h2>
+                <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
+                  {industry}
                 </p>
               </div>
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
@@ -122,7 +140,7 @@ export const SingleWorkPageLayout = ({
               duration: 0.7,
               delay: 0.8,
             }}
-            className="md:mt-12 mt-20"
+            className=" mt-12"
           >
             <ProjectImagePreview src={src} liveSite={liveSite} />
           </motion.div>
@@ -157,14 +175,14 @@ export const SingleWorkPageLayout = ({
             </div>
 
             <div className="grid gap-4 md:gap-8 lg:grid-cols-2">
-              {nonActiveProjects.map((project) => (
+              {otherProjects?.projects.map((project: any) => (
                 <WorkProjectCard
-                  key={project.title}
-                  link={project.link}
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  tags={project.tags}
+                  key={project?.projectTitle}
+                  link={project?.slug}
+                  title={project?.projectTitle}
+                  description={project?.description}
+                  image={project?.introImage.url}
+                  tags={project?.tags}
                 />
               ))}
             </div>

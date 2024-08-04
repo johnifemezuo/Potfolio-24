@@ -1,8 +1,11 @@
+import { ApolloProvider } from "@apollo/client";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import apolloClient from "../../base/request/apolloClient";
 import "./styles/globals.css";
 import "./styles/infinitScroll.css";
+import { ApolloWrapper } from "../../base/lib/apollo-wrapper";
 
 const poppins = Manrope({
   subsets: ["latin"],
@@ -26,7 +29,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/me-tab.png" />
       </head>
       <body className={poppins.className}>
-        {children}
+      <ApolloWrapper>{children}</ApolloWrapper>
         <Toaster />
       </body>
     </html>

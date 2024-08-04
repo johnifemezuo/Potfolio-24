@@ -6,10 +6,12 @@ export default function LayoutWithNavAndFooter({
 }: {
   children: React.ReactNode;
 }) {
+
+
+
   {
     return (
       <div>
-        <SingleWorkTopNavigation />
 
         {children}
       </div>

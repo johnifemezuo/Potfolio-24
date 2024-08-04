@@ -27,7 +27,7 @@ export const HeroSection = () => {
     <PageContainer>
       <div
         id="top"
-        className="relative rounded-xl border border-[#312F2F] h-[96vh] py-20 md:py-14 md:p-8 px-3 lg:12 xl:px-20
+        className="relative rounded-xl border border-[#312F2F] h-auto py-20 md:py-14 md:p-8 px-3 lg:pb-12 xl:px-20
       "
       >
         <div className="lg:-space-y-6 md:-space-y-6">
@@ -37,11 +37,11 @@ export const HeroSection = () => {
             animate="to"
             className="flex space-x-3 text-white"
           >
-            <span className=" text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
-              I`m
+            <span className=" text-[3rem] sm:text-[4rem] lg:text-[7rem] xl:text-[9rem] md:text-[6rem]">
+            I`m 
             </span>{" "}
-            <span className="text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem] ">
-              John
+            <span className="text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[9rem] md:text-[6rem] ">
+            John,
             </span>
           </motion.h1>
           <div
@@ -62,7 +62,7 @@ export const HeroSection = () => {
               initial={{ y: 90, opacity: 0 }}
               transition={{ duration: 1, delay: 0.5, bounce: 1.5 }}
               id="heroTitle"
-              className=" text-white md:text-[6rem] text-[3rem] sm:text-[4rem] lg:text-[9rem] xl:text-[rem]"
+              className=" text-white md:text-[6rem] text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[rem]"
             >
               Ifemezuo
             </motion.h1>
@@ -93,18 +93,19 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          <div className="md:grid md:grid-cols-2 md:gap-12 lg:max-w-[1000px] justify-between mx-auto md:space-x-6 space-y-8 md:space-y-0">
+          <div className="md:grid md:grid-cols-2 md:gap-12 lg:max-w-[1100px] justify-between mx-auto md:space-x-6 space-y-8 md:space-y-0">
             <div id="careerTitle" className="flex space-x-3">
               <span>
                 <RoundedArt className="w-[25px] md:w-[35px] h-[25px] md:h-[35px] spinnerLoop" />
               </span>
               <div className="space-y-3">
-                <h3 className="text-2xl text-white md:text-3xl xl:text-4xl underline pb-2 font-light">
-                  <span>Desi</span>
+                <h3 className="text-2xl text-white md:text-3xl xl:text-3xl underline pb-2 font-light">
+                  <span>Product Desi</span>
                   <span className="text-stone-500">gner</span>
                 </h3>
-                <p className=" md:text-xl 2xl:text-xl text-white font-light">
-                I am an independent product designer specializing in creating visually appealing and high-converting websites and apps.
+                <p className=" md:text-base 2xl:text-lg text-white font-light">
+                  I am an independent product designer specializing in creating
+                  visually appealing and high-converting websites and apps.
                 </p>
               </div>
             </div>
@@ -114,13 +115,13 @@ export const HeroSection = () => {
                 <RoundedArt className="w-[25px] md:w-[35px] h-[25px] md:h-[35px] spinnerLoop" />
               </span>
               <div className="space-y-3">
-                <h3 className="text-2xl text-white md:text-3xl xl:text-4xl underline pb-2 font-light">
+                <h3 className="text-2xl text-white md:text-3xl xl:text-3xl underline pb-2 font-light">
                   <span>Deve</span>
                   <span className="text-stone-500">Loper</span>
                 </h3>
-                <p className="  md:text-xl 2xl:text-xl text-white font-light">
-               
-                Front-End Developer with over 4 years of experience in designing and developing user interfaces for companies.
+                <p className="  md:text-base 2xl:text-lg text-white font-light">
+                  Experienced Front-End Developer with over 4 years of experience in
+                  designing and developing user interfaces for companies.
                 </p>
               </div>
             </div>

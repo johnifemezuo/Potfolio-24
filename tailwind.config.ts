@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -14,8 +15,16 @@ const config: Config = {
         "accent-color": "var(--accent-color)",
         "accent-colorTwo": "var(--yellow-color)"
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "ubuntu"],
+        oswald: ["Oswald", "san-serif"],
+        sourceSerif: ["Source Serif Pro", "serif"],
+        souceCodePro: ["Source Code Pro", "monospace"],
+        inter: ["inter", "serif"],
+        manrope: ["Manrope", "serif"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;
