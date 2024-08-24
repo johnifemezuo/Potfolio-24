@@ -9,36 +9,48 @@ import {
 import Reveal from "@/components/Global/Animation/Reveal";
 import { IProject } from "@/contents";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { WorkProjectCard } from "./WorkProjectCard";
-import { WorkSidebar } from "./WorkSidabar";
 
 export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
   const [filteredData, setFilteredData] = useState<IProject[]>(projects);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [selectedName, setSelectedName] = useState("");
+  // const [selectedName, setSelectedName] = useState("");
+
+  console.log({ filteredData, projects });
 
   const filterByCategory = (category: string) => {
+    console.log(category);
+
     setSelectedCategory(category);
-    if (category === "all") {
-      setFilteredData(projects);
-    } else {
+    if (category !== "all") {
       setFilteredData(
-        projects?.filter((project: any) => project.projecType === category)
+        projects?.filter(
+          (project: any) =>
+            project.projectType[0].toLowerCase() === category.toLowerCase()
+        )
       );
+    } else {
+      setFilteredData(projects);
     }
   };
 
-  const filterProjectByName = (name: string) => {
-    setSelectedName(name);
-    setFilteredData(
-      projects?.filter((project: any) => project.projectTitle.includes(name))
-    );
-  };
+  // const filterProjectByName = (name: string) => {
+  //   setSelectedName(name);
+  //   setFilteredData(
+  //     projects?.filter((project: any) => project.projectTitle.includes(name))
+  //   );
+  // };
+
+  useEffect(() => {
+     if (!filteredData) {
+        setFilteredData(projects);
+      }
+  }, [])
 
   return (
     <PageContainer>
-      <div className="relative mb-12 md:mb-8 rounded-xl border border-[#312F2F] h-[53vh] md:h-[68vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12">
+      <div className="relative mb-12 md:mb-8 rounded-xl border border-[#312F2F] h-[40vh] md:h-[50vh] xl:h-[75vh] 2xl:h-[70vh] py-12 m md:py-14 md:p-8 px-3 lg:12 xl:px-12">
         <motion.div
           initial={{
             opacity: 0,
@@ -128,7 +140,7 @@ export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
             />
           ) : null} */}
 
-          {filteredData?.length > 0 ? (
+          {filteredData ? (
             <div className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12">
               {filteredData?.map((project: any, ind: number) => (
                 <WorkProjectCard
@@ -137,7 +149,7 @@ export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
                   title={project.projectTitle}
                   description={project.description}
                   image={project.introImage?.url}
-                  tags={[project.ProjectType]}
+                  tags={project.projectType}
                 />
               ))}
             </div>

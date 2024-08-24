@@ -9,6 +9,8 @@ function WorkPage() {
   const projects = data?.projects;
   const dribbleShots = data?.dribbleShot;
 
+  
+
   return (
     <>
       <Head>

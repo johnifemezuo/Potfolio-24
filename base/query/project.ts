@@ -6,8 +6,9 @@ export const SELECTED_PROJECT_QUERY = gql`
       publishedAt
       id
       projectTitle
-      projecType
+      projectType
       description
+      livesite
       slug
       introImage {
         url
@@ -30,6 +31,7 @@ export const PROJECT_QUERY = gql`
       description
       role
       duration
+      projectType
       livesite
       year
       platform
@@ -47,13 +49,15 @@ export const PROJECT_QUERY = gql`
 
 export const OTHER_PROJECT_QUERY = gql`
   query getOtherProject($slug: String) {
-    projects(where: { slug_not_contains: $slug }, first: 1) {
+    projects(where: { slug_not_contains: $slug }, first: 2) {
       publishedAt
       id
       projectTitle
       description
       role
       duration
+      projectType
+      slug
       livesite
       platform
       introImage {
@@ -70,9 +74,10 @@ export const PROJECT_DETAILS_QUERY = gql`
       id
       projectTitle
       description
-      projecType
+      projectType
       role
       duration
+      livesite
       year
       industry
       platform
@@ -82,61 +87,6 @@ export const PROJECT_DETAILS_QUERY = gql`
       }
       content {
         html
-      }
-      title1
-      description1
-      image1 {
-        url
-      }
-      title2
-      description2
-      image2 {
-        url
-      }
-      title3
-      description3
-      image3 {
-        url
-      }
-      title4
-      description4
-      image4 {
-        url
-      }
-      title5
-      description5
-      image5 {
-        url
-      }
-      title6
-      description6
-      image6 {
-        url
-      }
-      title7
-      description7
-      image7 {
-        url
-      }
-      title8
-      description8
-      image8 {
-        url
-      }
-      media1 {
-        url
-      }
-      media2 {
-        url
-      }
-      media3 {
-        url
-      }
-      media4 {
-        url
-      }
-      media5 {
-        url
       }
     }
   }

@@ -86,7 +86,7 @@ export const AboutPage = () => {
                 opacity: 1,
               }}
               transition={{ delay: 0.7, duration: 1, bounce: 0.3 }}
-              className="flex--items space-x-6 md:space-x-24"
+              className="md:flex--items space-x-6 md:space-x-24"
             >
               <div className="flex items-center space-x-3">
                 <span>
@@ -127,7 +127,7 @@ export const AboutPage = () => {
               transition={{ delay: 1, duration: 1, staggerChildren: 0.6 }}
               className="pt-0 md:pt-6 lg:pt-12"
             >
-              <div className="text-zinc-500 tracking-tighter md:px-0 pr-6 text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-4xl 2xl:text-5xl leading-10 md:leading-10">
+              <div className="text-zinc-500 tracking-tighter md:px-0 pr-6 text-lg md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-4xl 2xl:text-5xl leading-10 md:leading-10">
                 <span>
                   I have always loved creating and surprising others. This
                   experience helped me become a pro at designing and developing.

@@ -14,6 +14,7 @@ function ProjectDetailPage({params}: any) {
 
   const projects = data?.projects;
 
+
   const { data: others  } = useQuery(OTHER_PROJECT_QUERY, {variables: {slug: params.projectId}});
     
   return (

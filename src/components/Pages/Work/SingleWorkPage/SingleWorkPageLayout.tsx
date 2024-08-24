@@ -47,26 +47,23 @@ export const SingleWorkPageLayout = ({
   
   // const nonActiveProjects = projects?.splice(0, 2);
 
+
   
   return (
     <div>
       {/* <CursorEffect /> */}
       <div className="bg-white pt-12 md:pt-0  md:pb-44">
         <div className="py-6 md:py-12" />
-        <div className="max-w-[1050px] mx-auto px-4 lg:px-0">
+        <div className="max-w-[1060px] mx-auto px-4 lg:px-0">
           <div className=" py-9 md:py-14 lg:py-16 ">
             {/* <Reveal duration={0.6}> */}
-            <GridTwoColsContainer>
-              <div className="w-full">
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium">
+            <div className="lg:flex justify-between space-y-6 lg:space-y-0 md:space-x-9 lg:space-x-20">
+                <h1 className="text-4xl md:text-3xl lg:text-4xl  font-semibold lg:max-w-[500px]">
                   {title}
                 </h1>
-              </div>
 
-              <div className="w-full ">
-                <p className="text-lg md:text-xl lg:text-2xl">{description}</p>
-              </div>
-            </GridTwoColsContainer>
+                <p className="text-base md:text-lg lg:text-xl lg:max-w-[600px]  ">{description}</p>
+            </div>
             {/* </Reveal> */}
 
             <motion.div
@@ -82,10 +79,10 @@ export const SingleWorkPageLayout = ({
                 duration: 0.6,
                 delay: 0.6,
               }}
-              className="mt-9 md:mt-28 grid grid-cols-2 lg:grid-cols-5 gap-5 md:gap-12 md:"
+              className="mt-9 md:mt-28 grid grid-cols-2 lg:grid-cols-5 gap-5 md:gap-8 md:"
             >
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                <h2 className="text-xs  text-zinc-600 uppercase">
                   ROLE / SERVICES
                 </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
@@ -93,7 +90,7 @@ export const SingleWorkPageLayout = ({
                 </p>
               </div>
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                <h2 className="text-xs  text-zinc-600 uppercase">
                   INDUSTRY
                 </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
@@ -101,7 +98,7 @@ export const SingleWorkPageLayout = ({
                 </p>
               </div>
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                <h2 className="text-xs  text-zinc-600 uppercase">
                   DURATION
                 </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
@@ -109,7 +106,7 @@ export const SingleWorkPageLayout = ({
                 </p>
               </div>
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                <h2 className="text-xs  text-zinc-600 uppercase">
                   PLATFORM
                 </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
@@ -117,7 +114,7 @@ export const SingleWorkPageLayout = ({
                 </p>
               </div>
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-xs md:text-sm text-zinc-500 uppercase">
+                <h2 className="text-xs  text-zinc-600 uppercase">
                   YEAR
                 </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
@@ -145,21 +142,18 @@ export const SingleWorkPageLayout = ({
             <ProjectImagePreview src={src} liveSite={liveSite} />
           </motion.div>
 
-          <div>{children}</div>
+          <div className="pb-20 lg:pb-12">{children}</div>
         </div>
       </div>
 
       <div className="bg-black py-12">
         <PageContainer>
-          <div className="lg:flex lg:py-12 space-y-12 lg:space-y-0 mb-20 items-center">
-            <div className="md:w-[400px]">
+          <div className=" lg:py-12 w-full space-y-12 mb-20 items-center">
+            <div className="lg:flex items-center justify-between space-y-9 lg:space-y-0">
               <Link href="/my-works">
-                <div className="lg:w-[600px] relative py-12 lg:py-0 ">
-                  <div className=" space-y-4 lg:space-y-8  text-white text-3xl md:text-3xl font-medium lg:text-6xl">
-                    More work? <br />
-                    this way
+                  <div className=" space-y-4 lg:space-y-8  text-white text-5xl md:text-3xl font-medium lg:text-6xl">
+                    More work
                   </div>
-                </div>
               </Link>
 
               <div className="flex space-x-3 md:mt-8">
@@ -167,14 +161,14 @@ export const SingleWorkPageLayout = ({
 
                 <button
                   onClick={() => push("/work")}
-                  className=" font-medium text-sm text-zinc-200 flex items-center space-x-3 rounded-full px-5 py-3 border border-zinc-200  hover:border-zinc-800 hover:text-white duration-300 transition-all "
+                  className=" font-medium text-sm text-zinc-200 min-w-[16x]  space-x-3 rounded-full px-5 py-3 border border-zinc-200  hover:border-zinc-800 hover:text-white duration-300 transition-all "
                 >
                   See All work
                 </button>
               </div>
             </div>
 
-            <div className="grid gap-4 md:gap-8 lg:grid-cols-2">
+            <div className="grid mt-8 lg:mt-12 gap-4 md:gap-8 lg:grid-cols-2">
               {otherProjects?.projects.map((project: any) => (
                 <WorkProjectCard
                   key={project?.projectTitle}

@@ -8,7 +8,7 @@
 
 body {
   background: var(--background-bg);
-  font-family: "Manrope", Inter, sans-serif;
+  font-family: "Manrope", Inter;
   margin: 0;
   padding: 0px;
   height: 100%;
@@ -95,6 +95,10 @@ body {
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+}
+
 @layer utilities {
   .flex--items {
     @apply flex items-center;
@@ -117,7 +121,7 @@ body {
     @apply border rounded-full px-4 py-2.5 border-zinc-400 hover:text-white transition-all hover:border-white text-zinc-400 font-light text-sm;
   }
   .pageStyle {
-    @apply font-normal prose prose-h5:font-bold prose-p:font-manrope prose-zinc  prose-a:underline prose-base prose-h3:font-bold prose-h3:border-b prose-h1:font-bold lg:prose-xl prose-p:text-lg prose-a:font-bold prose-a:text-[#2160e8] prose-a:text-base prose-p:leading-8 prose-img:w-full max-w-none prose-img:h-auto  lg:prose-img:rounded-[30px] prose-img:rounded-[20px] prose-p:text-black  prose-img:object-cover prose-img:object-center  prose-blockquote:border-2 prose-blockquote:pl-4 prose-blockquote:border-zinc-400;
+    @apply font-normal prose prose-h5:font-bold prose-p:font-manrope prose-zinc  prose-a:underline prose-base prose-h3:font-bold prose-h3:border-b prose-h1:font-bold prose-h1:text-4xl lg:prose-lg prose-p:text-lg prose-a:font-bold prose-a:text-[#2160e8] prose-a:text-base prose-p:leading-8 prose-img:w-full max-w-none prose-img:h-auto  lg:prose-img:rounded-[20px] prose-img:rounded-[20px] prose-p:text-black  prose-img:object-cover prose-img:object-center  prose-blockquote:border-2 prose-blockquote:pl-4 prose-blockquote:border-zinc-400;
   }
 
   @variants responsive {

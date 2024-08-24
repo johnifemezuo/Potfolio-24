@@ -14,7 +14,7 @@ export const ProjectImagePreview = ({
       <img
         src={src}
         alt="john ifemezuo project image"
-        className=" w-full h-full object-cover rounded-2xl lg:rounded-[40px]"
+        className=" w-full h-full object-cover rounded-xl lg:rounded-[20px]"
       />
 
       {liveSite ? (

@@ -32,7 +32,7 @@ export const WorkProjectCard = ({
       onMouseOver={() => setOnHover(true)}
       className="group cursor-pointer md:h-auto"
     >
-      <div className=" relative w-full h-[350px] xl:h-[350px] 2xl:h-[550px] transition-all overflow-hidden hover:rounded-2xl">
+      <div className=" relative w-full h-[270px] xl:h-[350px] 2xl:h-[450px] transition-all overflow-hidden hover:rounded-2xl">
         <img
           src={image}
           alt="growthlobby project"
@@ -41,7 +41,7 @@ export const WorkProjectCard = ({
       </div>
       <div className="py-4 border-t mt-5   w-full ">
           <div
-            className={`space-y-2 space-x-2 w-full duration-500 transition-all text-sm lg:text-base  text-zinc-300 `}
+            className={`space-y-2 mb-2 space-x-2 w-full duration-500 transition-all text-sm lg:text-base  text-zinc-300 `}
           >
             {tags?.map((tag, k) => (
               <button
@@ -53,7 +53,7 @@ export const WorkProjectCard = ({
             ))}
           </div>
         
-        <h3 className="text-2xl  md:text-3xl font-semibold text-white group-hover:underline transition-all duration-500  md:pt-2">
+        <h3 className="text-2xl  md:text-2xl font-semibold text-white group-hover:underline transition-all duration-500  md:pt-2">
            {title}
         </h3>
 
