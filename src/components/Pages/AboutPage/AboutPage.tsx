@@ -42,10 +42,10 @@ export const AboutPage = () => {
             transition={{ delay: 0.5, duration: 0.8, bounce: 0.3 }}
             className="flex space-x-3 "
           >
-            <span className="text-white text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
+            <span className="text-white text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[9rem] md:text-[6rem]">
               I`m
             </span>
-            <span className="text-stone-500  text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[10rem] md:text-[6rem]">
+            <span className="text-stone-500  text-[3rem] sm:text-[4rem] lg:text-[8rem] xl:text-[9rem] md:text-[6rem]">
               John
             </span>
           </motion.h1>
@@ -86,7 +86,7 @@ export const AboutPage = () => {
                 opacity: 1,
               }}
               transition={{ delay: 0.7, duration: 1, bounce: 0.3 }}
-              className="flex--items space-x-6 md:space-x-24"
+              className="md:flex--items space-x-6 md:space-x-24"
             >
               <div className="flex items-center space-x-3">
                 <span>
@@ -94,8 +94,8 @@ export const AboutPage = () => {
                 </span>
 
                 <div className="space-y-3">
-                  <h3 className="text-2xl text-white md:text-3xl xl:text-5xl">
-                    <span>Desi</span>
+                  <h3 className="text-2xl text-white md:text-3xl xl:text-4xl">
+                    <span>Product Desi</span>
                     <span className="text-stone-500">gner</span>
                   </h3>
                 </div>
@@ -107,7 +107,7 @@ export const AboutPage = () => {
                 </span>
 
                 <div className="space-y-3">
-                  <h3 className="text-2xl text-white md:text-3xl xl:text-5xl">
+                  <h3 className="text-2xl text-white md:text-3xl xl:text-4xl">
                     <span>Deve</span>
                     <span className="text-stone-500">loper</span>
                   </h3>
@@ -127,7 +127,7 @@ export const AboutPage = () => {
               transition={{ delay: 1, duration: 1, staggerChildren: 0.6 }}
               className="pt-0 md:pt-6 lg:pt-12"
             >
-              <div className="text-zinc-500 tracking-tighter md:px-0 pr-6 text-2xl md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-4xl 2xl:text-5xl leading-10 md:leading-10">
+              <div className="text-zinc-500 tracking-tighter md:px-0 pr-6 text-lg md:text-3xl lg:text-4xl py-6 xl:space-y-8 xl:text-4xl 2xl:text-5xl leading-10 md:leading-10">
                 <span>
                   I have always loved creating and surprising others. This
                   experience helped me become a pro at designing and developing.

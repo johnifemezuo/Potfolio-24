@@ -9,7 +9,7 @@ export const SiteTime = () => {
   const currentTime = `${hours}:${minutes < 10 ? "0" : ""}${minutes} ${amOrPm}`;
 
   return (
-    <div className="flex border border-border-color rounded-full px-6 py-3 space-x-2 capitalize font-medium">
+    <div className="flex border border-border-color rounded-full px-4 py-2 space-x-2 capitalize text-sm font-medium">
       <span className="text-stone-500">Nigeria</span>
       <span className="text-stone-200">{currentTime}</span>
     </div>

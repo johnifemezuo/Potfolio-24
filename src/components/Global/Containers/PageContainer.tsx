@@ -1,6 +1,6 @@
 export const PageContainer = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className="w-full px-3 xl:px-12">
+        <div className="max-w-[1440px] mx-auto px-3 xl:px-12">
             {children}
         </div>
     );
