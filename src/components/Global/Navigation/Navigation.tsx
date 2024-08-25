@@ -53,7 +53,7 @@ export const Navigation = () => {
               variants={buttonVariant}
               whileHover="hover"
               onClick={() => push("#contact")}
-              className="w-full font-medium px-4 py-3 bg-accent-colorTwo text-zinc-800 rounded-full hidden md:block"
+              className="w-full font-medium px-4 py-2.5 bg-accent-colorTwo text-zinc-800 rounded-full hidden md:block"
             >
               Get in touch
             </motion.button>
