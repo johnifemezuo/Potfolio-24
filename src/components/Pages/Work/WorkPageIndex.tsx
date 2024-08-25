@@ -15,19 +15,16 @@ import { WorkProjectCard } from "./WorkProjectCard";
 export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
   const [filteredData, setFilteredData] = useState<IProject[]>(projects);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  // const [selectedName, setSelectedName] = useState("");
 
   console.log({ filteredData, projects });
 
   const filterByCategory = (category: string) => {
-    console.log(category);
 
     setSelectedCategory(category);
     if (category !== "all") {
       setFilteredData(
-        projects?.filter(
-          (project: any) =>
-            project.projectType[0].toLowerCase() === category.toLowerCase()
+        projects?.filter((project: any) =>
+          project.projectType?.includes(category.toLowerCase())
         )
       );
     } else {
@@ -35,18 +32,12 @@ export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
     }
   };
 
-  // const filterProjectByName = (name: string) => {
-  //   setSelectedName(name);
-  //   setFilteredData(
-  //     projects?.filter((project: any) => project.projectTitle.includes(name))
-  //   );
-  // };
-
   useEffect(() => {
-     if (!filteredData) {
-        setFilteredData(projects);
-      }
-  }, [])
+    if (!filteredData) {
+      setFilteredData(projects);
+    }
+  }, []);
+
 
   return (
     <PageContainer>
@@ -132,15 +123,7 @@ export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
 
       <ScrollReveal>
         <div className="flex mb-32">
-          {/* {selectedCategory === "all" ? (
-            <WorkSidebar
-              projects={projects}
-              handleNameSelect={filterProjectByName}
-              selectedName={selectedName}
-            />
-          ) : null} */}
-
-          {filteredData ? (
+          {filteredData?.length > 0 ? (
             <div className=" h-auto w-full grid md:grid-cols-2 gap-5 md:gap-12">
               {filteredData?.map((project: any, ind: number) => (
                 <WorkProjectCard

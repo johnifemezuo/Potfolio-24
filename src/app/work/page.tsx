@@ -8,7 +8,6 @@ function WorkPage() {
   const { data } = useQuery(SELECTED_PROJECT_QUERY);
   const projects = data?.projects;
   const dribbleShots = data?.dribbleShot;
-
   
 
   return (

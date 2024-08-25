@@ -16,7 +16,7 @@ export const HomepageIndex = ({projects,dribbleShots}:any) => {
       <HeroSection />
       <ExceptOne />
       {/* <WorkSection /> */}
-      <SelectedWorks selectedWork={projects?.slice(0, 3)} />
+      <SelectedWorks selectedWork={projects?.slice(0, 4)} />
       {/* <Reviews /> */}
       <PageContainer>
         <ExceptTwo />
