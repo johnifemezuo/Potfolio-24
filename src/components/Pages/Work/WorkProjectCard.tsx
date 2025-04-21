@@ -43,14 +43,14 @@ export const WorkProjectCard = ({
           <div
             className={`space-y-2 mb-2 space-x-2 w-full duration-500 transition-all text-sm lg:text-base  text-zinc-300 `}
           >
-            {tags?.map((tag, k) => (
+           
               <button
                 key={k}
                 className="px-4 py-2 border rounded-full border-zinc-300 text-zinc-300 text-xs uppercase "
               >
                 {tag}
               </button>
-            ))}
+            
           </div>
         
         <h3 className="text-2xl  md:text-2xl font-semibold text-white group-hover:underline transition-all duration-500  md:pt-2">
