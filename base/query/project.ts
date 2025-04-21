@@ -5,7 +5,7 @@ export const SELECTED_PROJECT_QUERY = gql`
     projects {
       publishedAt
       id
-      projectTitle
+      title
       projectType
       description
       livesite
@@ -27,7 +27,7 @@ export const PROJECT_QUERY = gql`
     projects {
       publishedAt
       id
-      projectTitle
+      title
       description
       role
       duration
@@ -52,7 +52,7 @@ export const OTHER_PROJECT_QUERY = gql`
     projects(where: { slug_not_contains: $slug }, first: 2) {
       publishedAt
       id
-      projectTitle
+      title
       description
       role
       duration
@@ -72,7 +72,7 @@ export const PROJECT_DETAILS_QUERY = gql`
     projects(where: { slug: $slug }) {
       publishedAt
       id
-      projectTitle
+      title
       description
       projectType
       role
