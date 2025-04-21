@@ -10,7 +10,7 @@ export const ProjectDetails = ({ content, otherProjects }: any) => {
 
   return (
     <SingleWorkPageLayout
-      title={project?.projectTitle}
+      title={project?.title}
       description={project?.description}
       role={project?.role}
       duration={project?.duration}
