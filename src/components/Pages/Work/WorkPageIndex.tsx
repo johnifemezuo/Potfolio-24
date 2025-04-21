@@ -129,7 +129,7 @@ export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
                 <WorkProjectCard
                   key={ind}
                   link={project.slug}
-                  title={project.projectTitle}
+                  title={project.title}
                   description={project.description}
                   image={project.introImage?.url}
                   tags={project.projectType}
