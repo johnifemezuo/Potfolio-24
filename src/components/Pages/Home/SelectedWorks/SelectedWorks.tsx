@@ -104,11 +104,11 @@ export const SelectedWorks = ({selectedWork}:any) => {
                 animate={mainControls}
                 className=" h-auto w-full grid xl:grid-cols-2 gap-5 md:gap-9 lg:gap-12 bg-transparent"
               >
-                {selectedWork?.map(({description,slug, projectTitle, introImage}: any, ind: any) => (
+                {selectedWork?.map(({description,slug, title, introImage}: any, ind: any) => (
                   <WorkProjectCard
                     key={ind}
                     link={slug}
-                    title={projectTitle}
+                    title={title}
                     description={description}
                     image={introImage?.url}
                     tags={["design"]}
