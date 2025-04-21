@@ -114,11 +114,6 @@ export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
           active={selectedCategory === "development"}
           onClick={() => filterByCategory("development")}
         />
-        <BigButton
-          title="No-code"
-          active={selectedCategory === "no-code"}
-          onClick={() => filterByCategory("no-code")}
-        />
       </motion.div>
 
       <ScrollReveal>
