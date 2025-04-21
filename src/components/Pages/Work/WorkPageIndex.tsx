@@ -24,7 +24,7 @@ export const WorkPageIndex = ({ projects, dribbleShots }: any) => {
     if (category !== "all") {
       setFilteredData(
         projects?.filter((project: any) =>
-          project.projectType?.includes(category.toLowerCase())
+          project.projectType === category.toLowerCase()
         )
       );
     } else {
