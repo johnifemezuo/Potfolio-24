@@ -48,7 +48,7 @@ export const WorkProjectCard = ({
                 
                 className="px-4 py-2 border rounded-full border-zinc-300 text-zinc-300 text-xs uppercase "
               >
-                {tag}
+                {tags}
               </button>
             
           </div>
