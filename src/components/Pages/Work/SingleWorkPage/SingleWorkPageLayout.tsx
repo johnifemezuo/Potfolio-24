@@ -171,9 +171,9 @@ export const SingleWorkPageLayout = ({
             <div className="grid mt-8 lg:mt-12 gap-4 md:gap-8 lg:grid-cols-2">
               {otherProjects?.projects.map((project: any) => (
                 <WorkProjectCard
-                  key={project?.projectTitle}
+                  key={project?.title}
                   link={project?.slug}
-                  title={project?.projectTitle}
+                  title={project?.title}
                   description={project?.description}
                   image={project?.introImage.url}
                   tags={project?.tags}
