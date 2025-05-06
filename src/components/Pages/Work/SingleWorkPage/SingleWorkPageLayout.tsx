@@ -99,14 +99,6 @@ export const SingleWorkPageLayout = ({
               </div>
               <div className="space-y-2 md:space-y-5 divide-y inline-block">
                 <h2 className="text-xs  text-zinc-600 uppercase">
-                  DURATION
-                </h2>
-                <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
-                  {duration}
-                </p>
-              </div>
-              <div className="space-y-2 md:space-y-5 divide-y inline-block">
-                <h2 className="text-xs  text-zinc-600 uppercase">
                   PLATFORM
                 </h2>
                 <p className="text-base md:text-lg text-back tracking-tighter pt-2 md:pt-5">
