@@ -30,7 +30,6 @@ export const PROJECT_QUERY = gql`
       title
       description
       role
-      duration
       projectType
       livesite
       year
