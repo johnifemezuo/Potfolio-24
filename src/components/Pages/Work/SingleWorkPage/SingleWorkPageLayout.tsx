@@ -168,7 +168,7 @@ export const SingleWorkPageLayout = ({
                   title={project?.title}
                   description={project?.description}
                   image={project?.introImage.url}
-                  tags={project?.tags}
+                  tags={project?.projectType}
                 />
               ))}
             </div>
