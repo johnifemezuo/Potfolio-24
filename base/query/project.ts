@@ -54,7 +54,6 @@ export const OTHER_PROJECT_QUERY = gql`
       title
       description
       role
-      duration
       projectType
       slug
       livesite
@@ -75,7 +74,6 @@ export const PROJECT_DETAILS_QUERY = gql`
       description
       projectType
       role
-      duration
       livesite
       year
       industry
